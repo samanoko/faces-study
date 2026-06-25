@@ -1,6 +1,21 @@
 /* ==========================================================================
-   PLNĚ RESPONZIVNÍ NÁSTAVBA PRO AKADEMICKÝ POSTER (PIXEL-PERFECT FIGMA MATCH)
+   PLNĚ RESPONZIVNÍ NÁSTAVBA PRO AKADEMICKÝ POSTER (PIXEL-PERFECT FIGMA)
    ========================================================================== */
+
+/* Globální reset a zamezení skrytých chyb */
+strong, b {
+  font-weight: 700 !important;
+}
+em, i {
+  font-style: italic !important;
+}
+code {
+  font-family: monospace;
+  background-color: rgba(0, 0, 0, 0.05);
+  padding: 2px 4px;
+  border-radius: 4px;
+  font-size: 0.9em;
+}
 
 /* Globální kontejner posteru */
 .slide {
@@ -20,15 +35,15 @@
   width: 100%;
   max-width: 1920px;
   margin: 0 auto;
-  gap: 8px; /* Figma: Horizontální mezera mezi sloupci změněna z 24px na 8px */
-  padding: 24px; /* Figma: Vnější okraje posteru 24px všude */
+  gap: 8px; /* Figma: Horizontální mezera mezi sloupci */
+  padding: 24px; /* Figma: Vnější okraje celého posteru */
   box-sizing: border-box;
   position: relative;
   align-items: flex-start;
   justify-content: center;
 }
 
-/* Nastavení jednotlivých sloupků pro plynulé škálování */
+/* Nastavení jednotlivých sloupků */
 .slide .div,
 .slide .frame-6,
 .slide .frame-10 {
@@ -36,7 +51,7 @@
   flex-direction: column;
   align-items: flex-start;
   justify-content: flex-start;
-  gap: 8px; /* Figma: Vertikální mezera mezi kartami změněna z 16px na 8px */
+  gap: 8px; /* Figma: Vertikální mezera mezi kartami nad sebou */
   position: relative;
   flex: 1;
   min-width: 0;
@@ -75,14 +90,15 @@
 
 .slide .FULL-TEXT-simonockas {
   position: relative;
-  font-family: "Inter-Bold", Helvetica, sans-serif;
+  font-family: "Inter", Helvetica, sans-serif;
   color: #000000cc;
   font-size: 12px;
   margin: 0;
 }
 
-.slide .text-wrapper-11 { font-weight: 700; }
-.slide .text-wrapper-12 { font-family: "Inter-Regular", Helvetica, sans-serif; font-size: 15px; }
+.slide .text-wrapper-12 {
+  font-size: 15px;
+}
 
 .slide .group {
   position: relative;
@@ -117,7 +133,7 @@
   line-height: 1.1;
 }
 
-/* Sekce stimulů (Obrázek 1) */
+/* Sekce stimulů */
 .slide .frame-2 {
   display: flex;
   flex-direction: column;
@@ -133,7 +149,7 @@
   max-width: 616px;
   height: auto;
   align-items: center;
-  justify-content: space-between; /* Figma: Automatická mezera mezi pilotními obrázky */
+  justify-content: space-between; /* Figma: Automatické mezery */
   position: relative;
 }
 
@@ -144,7 +160,7 @@
   aspect-ratio: 1;
   object-fit: cover;
   display: block;
-  border-radius: 12px; /* Zaoblení 12px pro ukázky stimulů zachováno */
+  border-radius: 12px; /* Figma: Zaoblení hran 12px */
 }
 
 /* Bloky s kartami (Bílé boxy se stínem) */
@@ -155,8 +171,8 @@
   display: flex;
   flex-direction: column;
   align-items: flex-start;
-  gap: 12px; /* Figma: Interní vertikální gap uvnitř karty nastaven na 12px */
-  padding: 12px; /* Figma: Interní padding karty změněn z 20px na 12px */
+  gap: 12px; /* Figma: Vnitřní vertikální mezery */
+  padding: 12px; /* Figma: Vnitřní padding karet */
   position: relative;
   align-self: stretch;
   width: 100%;
@@ -167,14 +183,10 @@
   box-sizing: border-box;
 }
 
-.slide .frame-11 {
-  width: 100%;
-}
-
 .slide .frame-5 {
   display: flex;
   align-items: flex-start;
-  gap: 6px; /* Figma: Mezera mezi barevným obdélníkem a nadpisem karty zachována na 6px */
+  gap: 6px; /* Figma: Mezera mezi obdélníkem a nadpisem */
   position: relative;
   align-self: stretch;
   width: 100%;
@@ -187,12 +199,12 @@
   align-self: stretch;
 }
 
-/* Typografie */
+/* Typografie karet */
 .slide .text-wrapper-3 {
   position: relative;
   flex: 1;
   margin: 0;
-  font-family: "Inter-Medium", Helvetica, sans-serif;
+  font-family: "Inter", Helvetica, sans-serif;
   font-weight: 500;
   color: #000000cc;
   font-size: 22px;
@@ -203,7 +215,7 @@
 .slide .text-wrapper-4 {
   position: relative;
   align-self: stretch;
-  font-family: "Inter-Medium", Helvetica, sans-serif;
+  font-family: "Inter", Helvetica, sans-serif;
   font-weight: 500;
   color: #000000cc;
   font-size: 16px;
@@ -213,53 +225,32 @@
 .slide .p, .slide .text, .slide .text-2, .slide .text-3, .slide .text-wrapper-6 {
   position: relative;
   align-self: stretch;
-  font-family: var(--body-font-family);
+  font-family: var(--body-font-family), "Inter", sans-serif;
   font-weight: var(--body-font-weight);
   color: #000000cc;
   font-size: var(--body-font-size);
   letter-spacing: var(--body-letter-spacing);
   line-height: var(--body-line-height);
-  font-style: var(--body-font-style);
   margin: 0;
-}
-
-.slide .span, .slide .text-wrapper-2 {
-  font-family: var(--body-font-family);
-  font-weight: var(--body-font-weight);
-  color: #000000cc;
-  font-size: var(--body-font-size);
-  letter-spacing: var(--body-letter-spacing);
-  font-style: var(--body-font-style);
-  line-height: var(--body-line-height);
-}
-
-.slide .line {
-  position: relative;
-  align-self: stretch;
-  width: 100%;
-  height: 1px;
-  object-fit: cover;
-  display: block;
 }
 
 .slide .hypot-zy, .slide .text-wrapper-5 {
   position: relative;
   width: fit-content;
   margin: 0;
-  font-family: var(--heading-3-font-family);
+  font-family: var(--heading-3-font-family), "Inter", sans-serif;
   font-weight: var(--heading-3-font-weight);
   color: #000000cc;
   font-size: var(--heading-3-font-size);
   letter-spacing: var(--heading-3-letter-spacing);
   line-height: var(--heading-3-line-height);
-  font-style: var(--heading-3-font-style);
 }
 
 .slide .hypot-zy {
   color: #000000a8;
 }
 
-/* Kontejnery pro odstavce a seznamy */
+/* Kontejnery pro seznamy a odstavce */
 .slide .flexcontainer, 
 .slide .flexcontainer-2, 
 .slide .flexcontainer-3, 
@@ -267,7 +258,7 @@
   display: flex;
   flex-direction: column;
   align-items: flex-start;
-  gap: 12px; /* Figma: Spacing odstavců a seznamů změněn z 10px na 12px */
+  gap: 12px; /* Figma: Mezery mezi odstavci/seznamy */
   align-self: stretch;
   width: 100%;
 }
@@ -276,7 +267,7 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  gap: 12px; /* Figma: Mezery uvnitř kontejnerů sjednoceny na 12px */
+  gap: 12px;
   padding: 12px;
   position: relative;
   align-self: stretch;
@@ -293,16 +284,39 @@
   background-color: #0cf2a522;
 }
 
-/* Grafické výstupy Jamovi */
-.slide .image {
+/* Stylování živé výsledkové tabulky (Figma match) */
+.live-results-table {
   width: 100%;
-  height: auto;
-  aspect-ratio: 3.63;
-  object-fit: cover;
-  display: block;
-  position: relative;
+  border-collapse: collapse;
+  font-family: "Inter", Helvetica, Arial, sans-serif;
+  font-size: 14px;
+  color: #333333;
+  margin: 4px 0;
 }
 
+.live-results-table th {
+  font-weight: 600;
+  text-align: left;
+  border-bottom: 2px solid #e0e0e0;
+  padding: 6px 8px;
+  color: #000000cc;
+}
+
+.live-results-table td {
+  padding: 6px 8px;
+  border-bottom: 1px solid #f0f0f0;
+}
+
+.live-results-table tr:last-child td {
+  border-bottom: 1px solid #e0e0e0;
+}
+
+.live-results-table td.sig-value {
+  color: #00875a;
+  font-weight: 700;
+}
+
+/* Grafické výstupy */
 .slide .frame-12 {
   display: flex;
   align-items: flex-start;
@@ -352,14 +366,14 @@
 .slide .text-wrapper-7, .slide .text-wrapper-9, .slide .text-wrapper-10 {
   position: relative;
   width: fit-content;
-  font-family: "Inter-Regular", Helvetica, sans-serif;
+  font-family: "Inter", Helvetica, sans-serif;
   font-weight: 400;
   color: #000000cc;
   font-size: 11px;
   margin: 0;
 }
 
-/* Výsledky H3 blok */
+/* H3 blok interakce */
 .slide .frame-16 {
   display: flex;
   flex-direction: row;
@@ -426,7 +440,7 @@
     width: 100% !important;
     max-width: 100% !important;
     flex: none;
-    gap: 12px;
+    gap: 8px;
   }
 
   .slide .text-wrapper {
