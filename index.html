@@ -31,7 +31,7 @@
         <p class="landing-institution">Katedra psychologie • Filozofická fakulta Univerzity Karlovy</p>
       </header>
 
-      <!-- Náhledový vizuál (Tři tváre z výzkumu) -->
+      <!-- Náhledový vizuál (Tři tváře z výzkumu) -->
       <div class="landing-preview">
         <img src="images/pilot_31_high_clean.png" alt="Hladce oholen" />
         <img src="images/pilot_31_high_stache.png" alt="Knír" />
@@ -50,8 +50,16 @@
 
       <!-- Akční tlačítka (Rozcestník) -->
       <div class="landing-actions">
-        <a href="poster.html" class="btn btn-primary">📊 Prohlédnout výsledný poster</a>
-        <a href="https://script.google.com/macros/s/AKfycbzfjkvLAMv269YrFdqGUx8NE0ccw222MC-_xlQdueb7EFfq0m50UP5lkJJmPn8vpWN8/exec" target="_blank" class="btn btn-secondary">🔬 Vyzkoušet si experiment</a>
+        <!-- Vizuální tlačítko s integrovaným thumbnailem posteru -->
+        <a href="poster.html" class="btn btn-primary btn-poster">
+          <img src="images/poster_thumb.png" alt="Náhled akademického posteru" class="btn-thumb" />
+          <span class="btn-text">📊 Prohlédnout výsledný poster</span>
+        </a>
+        
+        <a href="https://script.google.com/macros/s/AKfycbzfjkvLAMv269YrFdqGUx8NE0ccw222MC-_xlQdueb7EFfq0m50UP5lkJJmPn8vpWN8/exec" target="_blank" class="btn btn-secondary">
+          <span class="btn-icon">🔬</span>
+          <span class="btn-text">Vyzkoušet si experiment<br><small style="font-weight: 400; opacity: 0.8; font-size: 11px;">Spustit aktivní modul</small></span>
+        </a>
       </div>
 
     </div>
