@@ -72,12 +72,13 @@ code {
   align-items: stretch !important;
 }
 
-/* Horní info lišta (QR kód a logo) uvnitř prvního sloupce */
+/* --- HORNÍ INFO LIŠTA (Figma: Hug height, Fill width of column 1) --- */
 .slide .frame-20 {
   display: flex !important;
-  width: 100% !important;
+  width: 100% !important; /* Figma: Fill width */
+  height: auto !important; /* Figma: Hug height */
   align-items: center !important;
-  justify-content: space-between !important;
+  justify-content: space-between !important; /* Figma: Gap set to Auto */
   padding: 8px 0px 16px 0px !important;
   box-sizing: border-box !important;
   position: relative !important;
@@ -85,29 +86,44 @@ code {
   margin-bottom: 4px !important;
 }
 
+/* Kontejner s QR kódem a textovým blokem (Figma: Height fill container) */
 .slide .frame-21 {
   display: inline-flex !important;
   align-items: center !important;
-  gap: 12px !important;
+  gap: 10px !important; /* Figma: Gap set to 10px */
+  height: 54px !important; /* Figma: Fill height (převázáno na výšku loga/kontextu) */
 }
 
+/* QR kód (Figma: Height set to fill container, no fixed size) */
 .slide .frame-20 .img-qr {
-  width: 54px !important;
-  height: 54px !important;
+  height: 100% !important; /* Figma: Fill container height */
+  width: auto !important;  /* Zachování proporcí poměru stran */
   display: block !important;
-  flex: 0 0 54px !important;
 }
 
 .slide .FULL-TEXT-simonockas {
   position: relative !important;
   font-family: "Inter", Helvetica, sans-serif !important;
   color: #000000cc !important;
-  font-size: 12px !important;
   margin: 0 !important;
+  display: flex !important;
+  flex-direction: column !important;
 }
 
+/* Označení FULL-TEXT (Figma: All caps, bold, size 12px) */
+.slide .fulltext-label {
+  font-size: 12px !important;
+  font-weight: 700 !important;
+  text-transform: uppercase !important;
+  line-height: 1.2 !important;
+  letter-spacing: 0.5px !important;
+}
+
+/* Odkaz na studii (Figma: Regular, not bold, size 16px) */
 .slide .text-wrapper-12 {
-  font-size: 15px !important;
+  font-size: 16px !important;
+  font-weight: 400 !important;
+  line-height: 1.2 !important;
 }
 
 .slide .group {
@@ -209,7 +225,7 @@ code {
   align-self: stretch !important;
 }
 
-/* Typografie karet */
+/* Název studie v první kartě (Figma: Změněno na 24px) */
 .slide .text-wrapper-3 {
   position: relative !important;
   flex: 1 !important;
@@ -217,18 +233,19 @@ code {
   font-family: "Inter", Helvetica, sans-serif !important;
   font-weight: 500 !important;
   color: #000000cc !important;
-  font-size: 22px !important;
+  font-size: 24px !important;
   letter-spacing: -0.25px !important;
   line-height: 1.3 !important;
 }
 
+/* Jména autorů pod názvem (Figma: Změněno na 18px) */
 .slide .text-wrapper-4 {
   position: relative !important;
   align-self: stretch !important;
   font-family: "Inter", Helvetica, sans-serif !important;
   font-weight: 500 !important;
   color: #000000cc !important;
-  font-size: 16px !important;
+  font-size: 18px !important;
   margin: 0 !important;
 }
 
@@ -340,13 +357,14 @@ code {
 .slide .rectangle-3 { background-color: #79a6ea !important; }
 .slide .rectangle-4 { background-color: #a8a8a8 !important; }
 
+/* Popisky legend pod grafy (Figma: Změněno na 8px) */
 .slide .text-wrapper-7, .slide .text-wrapper-9, .slide .text-wrapper-10 {
   position: relative !important;
   width: fit-content !important;
   font-family: "Inter", Helvetica, sans-serif !important;
   font-weight: 400 !important;
   color: #000000cc !important;
-  font-size: 11px !important;
+  font-size: 8px !important;
   margin: 0 !important;
 }
 
@@ -429,6 +447,11 @@ code {
     align-items: center !important;
     justify-content: space-between !important;
     padding-bottom: 12px !important;
+    height: auto !important;
+  }
+
+  .slide .frame-21 {
+    height: 48px !important;
   }
 
   .slide .frame-3 {
