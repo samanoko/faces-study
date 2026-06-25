@@ -1,5 +1,5 @@
 /* ==========================================================================
-   PLNĚ RESPONZIVNÍ NÁSTAVBA PRO AKADEMICKÝ POSTER
+   PLNĚ RESPONZIVNÍ NÁSTAVBA PRO AKADEMICKÝ POSTER (PIXEL-PERFECT FIGMA MATCH)
    ========================================================================== */
 
 /* Globální kontejner posteru */
@@ -20,8 +20,8 @@
   width: 100%;
   max-width: 1920px;
   margin: 0 auto;
-  gap: 24px;
-  padding: 32px 24px;
+  gap: 8px; /* Figma: Horizontální mezera mezi sloupci změněna z 24px na 8px */
+  padding: 24px; /* Figma: Vnější okraje posteru 24px všude */
   box-sizing: border-box;
   position: relative;
   align-items: flex-start;
@@ -36,10 +36,10 @@
   flex-direction: column;
   align-items: flex-start;
   justify-content: flex-start;
-  gap: 16px;
+  gap: 8px; /* Figma: Vertikální mezera mezi kartami změněna z 16px na 8px */
   position: relative;
   flex: 1;
-  min-width: 0; /* Ochrana proti přetečení textu */
+  min-width: 0;
   align-self: stretch;
 }
 
@@ -112,7 +112,7 @@
   font-family: "Nohemi-Medium", Helvetica, sans-serif;
   font-weight: 500;
   color: #000000;
-  font-size: clamp(32px, 4vw, 72px); /* Responzivní velikost nadpisu */
+  font-size: clamp(32px, 4vw, 72px);
   letter-spacing: -0.72px;
   line-height: 1.1;
 }
@@ -133,9 +133,8 @@
   max-width: 616px;
   height: auto;
   align-items: center;
-  justify-content: space-between;
+  justify-content: space-between; /* Figma: Automatická mezera mezi pilotními obrázky */
   position: relative;
-  gap: 8px;
 }
 
 .slide .frame-3 .img {
@@ -145,7 +144,7 @@
   aspect-ratio: 1;
   object-fit: cover;
   display: block;
-  border-radius: 12px; /* Aplikován poloměr 12px podle zadání */
+  border-radius: 12px; /* Zaoblení 12px pro ukázky stimulů zachováno */
 }
 
 /* Bloky s kartami (Bílé boxy se stínem) */
@@ -156,8 +155,8 @@
   display: flex;
   flex-direction: column;
   align-items: flex-start;
-  gap: 12px;
-  padding: 20px;
+  gap: 12px; /* Figma: Interní vertikální gap uvnitř karty nastaven na 12px */
+  padding: 12px; /* Figma: Interní padding karty změněn z 20px na 12px */
   position: relative;
   align-self: stretch;
   width: 100%;
@@ -175,7 +174,7 @@
 .slide .frame-5 {
   display: flex;
   align-items: flex-start;
-  gap: 6px;
+  gap: 6px; /* Figma: Mezera mezi barevným obdélníkem a nadpisem karty zachována na 6px */
   position: relative;
   align-self: stretch;
   width: 100%;
@@ -260,12 +259,15 @@
   color: #000000a8;
 }
 
-/* Kontejnery pro seznamy */
-.slide .flexcontainer, .slide .flexcontainer-2, .slide .flexcontainer-3, .slide .flexcontainer-4 {
+/* Kontejnery pro odstavce a seznamy */
+.slide .flexcontainer, 
+.slide .flexcontainer-2, 
+.slide .flexcontainer-3, 
+.slide .flexcontainer-4 {
   display: flex;
   flex-direction: column;
   align-items: flex-start;
-  gap: 10px;
+  gap: 12px; /* Figma: Spacing odstavců a seznamů změněn z 10px na 12px */
   align-self: stretch;
   width: 100%;
 }
@@ -274,7 +276,7 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  gap: 10px;
+  gap: 12px; /* Figma: Mezery uvnitř kontejnerů sjednoceny na 12px */
   padding: 12px;
   position: relative;
   align-self: stretch;
@@ -413,9 +415,9 @@
    ========================================================================== */
 @media (max-width: 1199px) {
   .slide .frame {
-    flex-direction: column; /* Řazení sloupců pod sebe */
-    padding: 20px 16px;
-    gap: 20px;
+    flex-direction: column;
+    padding: 24px 16px;
+    gap: 16px;
   }
 
   .slide .div,
@@ -424,11 +426,12 @@
     width: 100% !important;
     max-width: 100% !important;
     flex: none;
+    gap: 12px;
   }
 
   .slide .text-wrapper {
     text-align: center;
-    font-size: 34px; /* Kompaktnější nadpis na mobilu */
+    font-size: 34px;
   }
 
   .slide .frame-20 {
