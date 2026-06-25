@@ -1,0 +1,15 @@
+:root {
+  --complementary-1: rgba(63, 127, 255, 1);
+  --body-font-family: "Inter", Helvetica;
+  --body-font-weight: 400;
+  --body-font-size: 16px;
+  --body-letter-spacing: 0px;
+  --body-line-height: normal;
+  --body-font-style: normal;
+  --heading-3-font-family: "Inter", Helvetica;
+  --heading-3-font-weight: 600;
+  --heading-3-font-size: 18.04511260986328px;
+  --heading-3-letter-spacing: 0px;
+  --heading-3-line-height: normal;
+  --heading-3-font-style: normal;
+}

@@ -1,0 +1,470 @@
+/* ==========================================================================
+   PLNĚ RESPONZIVNÍ NÁSTAVBA PRO AKADEMICKÝ POSTER
+   ========================================================================== */
+
+/* Globální kontejner posteru */
+.slide {
+  background-color: #fefcf9;
+  width: 100%;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  box-sizing: border-box;
+}
+
+/* Hlavní mřížka s třemi sloupci */
+.slide .frame {
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  max-width: 1920px;
+  margin: 0 auto;
+  gap: 24px;
+  padding: 32px 24px;
+  box-sizing: border-box;
+  position: relative;
+  align-items: flex-start;
+  justify-content: center;
+}
+
+/* Nastavení jednotlivých sloupků pro plynulé škálování */
+.slide .div,
+.slide .frame-6,
+.slide .frame-10 {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: flex-start;
+  gap: 16px;
+  position: relative;
+  flex: 1;
+  min-width: 0; /* Ochrana proti přetečení textu */
+  align-self: stretch;
+}
+
+.slide .frame-6 {
+  align-items: stretch;
+}
+
+/* Hlavička s hlavním titulem */
+.slide .div-wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  padding: 12px 0px;
+  position: relative;
+  align-self: stretch;
+  width: 100%;
+}
+
+.slide .text-wrapper {
+  position: relative;
+  display: flex;
+  align-items: center;
+  flex: 1;
+  margin: 0;
+  font-family: "Nohemi-Medium", Helvetica, sans-serif;
+  font-weight: 500;
+  color: #000000;
+  font-size: clamp(32px, 4vw, 72px); /* Responzivní velikost nadpisu */
+  letter-spacing: -0.72px;
+  line-height: 1.1;
+}
+
+/* Sekce stimulů (Obrázek 1) */
+.slide .frame-2 {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 10px;
+  position: relative;
+  width: 100%;
+}
+
+.slide .frame-3 {
+  display: flex;
+  width: 100%;
+  max-width: 616px;
+  height: auto;
+  align-items: center;
+  justify-content: space-between;
+  position: relative;
+  gap: 8px;
+}
+
+.slide .img {
+  position: relative;
+  width: calc(33.33% - 6px);
+  height: auto;
+  aspect-ratio: 1;
+  object-fit: cover;
+  display: block;
+}
+
+/* Bloky s kartami (Bílé boxy se stínem) */
+.slide .frame-4,
+.slide .frame-8,
+.slide .frame-9,
+.slide .frame-11 {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 12px;
+  padding: 20px;
+  position: relative;
+  align-self: stretch;
+  width: 100%;
+  background-color: #ffffff;
+  border-radius: 12px;
+  border: 1px solid #0000001a;
+  box-shadow: 0px 4px 24px #0000000d;
+  box-sizing: border-box;
+}
+
+.slide .frame-11 {
+  width: 100%;
+}
+
+.slide .frame-5 {
+  display: flex;
+  align-items: flex-start;
+  gap: 6px;
+  position: relative;
+  align-self: stretch;
+  width: 100%;
+}
+
+.slide .rectangle {
+  width: 6px;
+  background-color: var(--complementary-1);
+  position: relative;
+  align-self: stretch;
+}
+
+/* Typografie */
+.slide .text-wrapper-3 {
+  position: relative;
+  flex: 1;
+  margin: 0;
+  font-family: "Inter-Medium", Helvetica, sans-serif;
+  font-weight: 500;
+  color: #000000cc;
+  font-size: 22px;
+  letter-spacing: -0.25px;
+  line-height: 1.3;
+}
+
+.slide .text-wrapper-4 {
+  position: relative;
+  align-self: stretch;
+  font-family: "Inter-Medium", Helvetica, sans-serif;
+  font-weight: 500;
+  color: #000000cc;
+  font-size: 16px;
+  margin: 0;
+}
+
+.slide .p, .slide .text, .slide .text-2, .slide .text-3, .slide .text-wrapper-6 {
+  position: relative;
+  align-self: stretch;
+  font-family: var(--body-font-family);
+  font-weight: var(--body-font-weight);
+  color: #000000cc;
+  font-size: var(--body-font-size);
+  letter-spacing: var(--body-letter-spacing);
+  line-height: var(--body-line-height);
+  font-style: var(--body-font-style);
+  margin: 0;
+}
+
+.slide .span, .slide .text-wrapper-2 {
+  font-family: var(--body-font-family);
+  font-weight: var(--body-font-weight);
+  color: #000000cc;
+  font-size: var(--body-font-size);
+  letter-spacing: var(--body-letter-spacing);
+  font-style: var(--body-font-style);
+  line-height: var(--body-line-height);
+}
+
+.slide .line {
+  position: relative;
+  align-self: stretch;
+  width: 100%;
+  height: 1px;
+  object-fit: cover;
+  display: block;
+}
+
+.slide .hypot-zy, .slide .text-wrapper-5 {
+  position: relative;
+  width: fit-content;
+  margin: 0;
+  font-family: var(--heading-3-font-family);
+  font-weight: var(--heading-3-font-weight);
+  color: #000000cc;
+  font-size: var(--heading-3-font-size);
+  letter-spacing: var(--heading-3-letter-spacing);
+  line-height: var(--heading-3-line-height);
+  font-style: var(--heading-3-font-style);
+}
+
+.slide .hypot-zy {
+  color: #000000a8;
+}
+
+/* Kontejnery pro seznamy */
+.slide .flexcontainer, .slide .flexcontainer-2, .slide .flexcontainer-3, .slide .flexcontainer-4 {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 10px;
+  align-self: stretch;
+  width: 100%;
+}
+
+.slide .frame-7, .slide .flexcontainer-wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  padding: 12px;
+  position: relative;
+  align-self: stretch;
+  width: 100%;
+  border-radius: 12px;
+  box-sizing: border-box;
+}
+
+.slide .frame-7 {
+  border: 0.5px solid #00000033;
+}
+
+.slide .flexcontainer-wrapper {
+  background-color: #0cf2a522;
+}
+
+/* Grafické výstupy Jamovi */
+.slide .image {
+  width: 100%;
+  height: auto;
+  aspect-ratio: 3.63;
+  object-fit: cover;
+  display: block;
+  position: relative;
+}
+
+.slide .frame-12 {
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+  gap: 12px;
+  position: relative;
+  align-self: stretch;
+  width: 100%;
+}
+
+.slide .image-2, .slide .image-3 {
+  width: calc(50% - 6px);
+  height: auto;
+  object-fit: contain;
+  display: block;
+}
+
+/* Legendy ke grafům */
+.slide .frame-13 {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  gap: 12px;
+  position: relative;
+  align-self: stretch;
+  width: 100%;
+}
+
+.slide .frame-14 {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  position: relative;
+}
+
+.slide .rectangle-2, .slide .rectangle-3, .slide .rectangle-4 {
+  width: 10px;
+  height: 10px;
+  border-radius: 2px;
+  flex-shrink: 0;
+}
+
+.slide .rectangle-2 { background-color: #e8b554; }
+.slide .rectangle-3 { background-color: #79a6ea; }
+.slide .rectangle-4 { background-color: #a8a8a8; }
+
+.slide .text-wrapper-7, .slide .text-wrapper-9, .slide .text-wrapper-10 {
+  position: relative;
+  width: fit-content;
+  font-family: "Inter-Regular", Helvetica, sans-serif;
+  font-weight: 400;
+  color: #000000cc;
+  font-size: 11px;
+  margin: 0;
+}
+
+/* Výsledky H3 blok */
+.slide .frame-16 {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 16px;
+  position: relative;
+  align-self: stretch;
+  width: 100%;
+}
+
+.slide .image-wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: relative;
+}
+
+.slide .image-4 {
+  position: relative;
+  width: 100%;
+  max-width: 260px;
+  height: auto;
+  aspect-ratio: 1.17;
+  display: block;
+}
+
+.slide .frame-17 {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
+  gap: 14px;
+  flex: 1;
+}
+
+.slide .frame-18 {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 6px;
+  width: 100%;
+}
+
+.slide .frame-19 {
+  display: inline-flex;
+  align-items: center;
+  gap: 12px;
+}
+
+/* Doplňující informace (Patička / Aside) */
+.slide .frame-20 {
+  display: flex;
+  width: 100%;
+  max-width: 1920px;
+  margin: 0 auto;
+  align-items: center;
+  justify-content: space-between;
+  padding: 24px;
+  box-sizing: border-box;
+  position: relative;
+  border-top: 1px solid #00000014;
+  background-color: #fefcf9;
+}
+
+.slide .frame-21 {
+  display: inline-flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.slide .frame-20 .img {
+  width: 54px;
+  height: 54px;
+  display: block;
+}
+
+.slide .FULL-TEXT-simonockas {
+  position: relative;
+  font-family: "Inter-Bold", Helvetica, sans-serif;
+  color: #000000cc;
+  font-size: 12px;
+  margin: 0;
+}
+
+.slide .text-wrapper-11 { font-weight: 700; }
+.slide .text-wrapper-12 { font-family: "Inter-Regular", Helvetica, sans-serif; font-size: 15px; }
+
+.slide .group {
+  position: relative;
+  width: 240px;
+  height: auto;
+  display: block;
+}
+
+/* ==========================================================================
+   MEDIA QUERY PRO MOBILY A TABLETY (Zlomení do 1 sloupce pod sebe)
+   ========================================================================== */
+@media (max-width: 1199px) {
+  .slide .frame {
+    flex-direction: column; /* Řazení sloupců pod sebe */
+    padding: 20px 16px;
+    gap: 20px;
+  }
+
+  .slide .div,
+  .slide .frame-6,
+  .slide .frame-10 {
+    width: 100% !important;
+    max-width: 100% !important;
+    flex: none;
+  }
+
+  .slide .text-wrapper {
+    text-align: center;
+    font-size: 34px; /* Kompaktnější nadpis na mobilu */
+  }
+
+  .slide .frame-3 {
+    max-width: 100%;
+  }
+
+  .slide .frame-12 {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .slide .image-2, .slide .image-3 {
+    width: 100%;
+    max-width: 340px;
+  }
+
+  .slide .frame-16 {
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+  }
+
+  .slide .image-4 {
+    max-width: 280px;
+  }
+
+  /* Transformace aside na standardní mobilní patičku */
+  .slide .frame-20 {
+    flex-direction: column;
+    align-items: center;
+    gap: 24px;
+    text-align: center;
+    padding: 32px 16px;
+  }
+
+  .slide .frame-21 {
+    flex-direction: column;
+    gap: 8px;
+  }
+}
