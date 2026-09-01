@@ -1,0 +1,251 @@
+<!DOCTYPE html>
+<html lang="cs">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Holit či neholit? Vliv vousů na vnímanou atraktivitu mužských tváří</title>
+  <link rel="stylesheet" href="style.css">
+  <style>
+    /* Reader Layout Styles */
+    .reader-body {
+      background-color: #f8f9fa;
+      color: #212529;
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+      line-height: 1.7;
+      margin: 0;
+      padding: 0;
+    }
+    .reader-topbar {
+      background: #ffffff;
+      border-bottom: 1px solid #e9ecef;
+      padding: 12px 24px;
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+    .reader-topbar a {
+      color: #0d6efd;
+      text-decoration: none;
+      font-weight: 500;
+      font-size: 14px;
+    }
+    .reader-container {
+      max-width: 1200px;
+      margin: 30px auto;
+      padding: 0 20px;
+      display: grid;
+      grid-template-columns: 260px 1fr;
+      gap: 40px;
+    }
+    @media (max-width: 850px) {
+      .reader-container {
+        grid-template-columns: 1fr;
+      }
+      .reader-sidebar {
+        display: none;
+      }
+    }
+    .reader-sidebar {
+      position: sticky;
+      top: 80px;
+      height: fit-content;
+      font-size: 14px;
+    }
+    .reader-sidebar h4 {
+      font-size: 12px;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      color: #6c757d;
+      margin-bottom: 12px;
+    }
+    .reader-sidebar ul {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+    }
+    .reader-sidebar li {
+      margin-bottom: 8px;
+    }
+    .reader-sidebar a {
+      color: #495057;
+      text-decoration: none;
+      transition: color 0.2s;
+    }
+    .reader-sidebar a:hover {
+      color: #0d6efd;
+    }
+    .reader-content {
+      background: #ffffff;
+      padding: 40px 50px;
+      border-radius: 8px;
+      border: 1px solid #e9ecef;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.03);
+    }
+    @media (max-width: 600px) {
+      .reader-content {
+        padding: 20px;
+      }
+    }
+    .article-title {
+      font-size: 2.2rem;
+      font-weight: 700;
+      line-height: 1.25;
+      margin-top: 0;
+      color: #111111;
+    }
+    .article-authors {
+      font-size: 1.1rem;
+      color: #495057;
+      margin-bottom: 4px;
+    }
+    .article-affiliations {
+      font-size: 0.9rem;
+      color: #6c757d;
+      margin-bottom: 24px;
+    }
+    .abstract-box {
+      background: #f1f5f9;
+      border-left: 4px solid #0d6efd;
+      padding: 20px;
+      border-radius: 0 6px 6px 0;
+      margin-bottom: 36px;
+    }
+    .abstract-box h3 {
+      margin-top: 0;
+      font-size: 1rem;
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+    }
+    .article-body h2 {
+      font-size: 1.5rem;
+      border-bottom: 2px solid #f1f5f9;
+      padding-bottom: 8px;
+      margin-top: 40px;
+    }
+    .article-body h3 {
+      font-size: 1.2rem;
+      margin-top: 24px;
+    }
+    .btn-download-pdf {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      background: #0d6efd;
+      color: #fff;
+      padding: 8px 16px;
+      border-radius: 6px;
+      text-decoration: none;
+      font-size: 14px;
+      font-weight: 500;
+    }
+    .btn-download-pdf:hover {
+      background: #0b5ed7;
+    }
+  </style>
+</head>
+<body class="reader-body">
+
+  <nav class="reader-topbar">
+    <a href="index.html">← Zpět na přehled studie</a>
+    <a href="facesstudypaper.pdf" target="_blank" class="btn-download-pdf">
+      <span>📄 Stáhnout původní PDF</span>
+    </a>
+  </nav>
+
+  <div class="reader-container">
+    
+    <!-- Table of Contents Sidebar -->
+    <aside class="reader-sidebar">
+      <h4>Obsah článku</h4>
+      <ul>
+        <li><a href="#abstract">Abstrakt</a></li>
+        <li><a href="#uvod">Úvod</a></li>
+        <li><a href="#metody">Metodologie</a></li>
+        <li><a href="#analyza">Statistická analýza</a></li>
+        <li><a href="#vysledky">Výsledky</a></li>
+        <li><a href="#diskuse">Diskuse</a></li>
+        <li><a href="#literatura">Literatura</a></li>
+      </ul>
+    </aside>
+
+    <!-- Main Reader Article Content -->
+    <main class="reader-content">
+      <article>
+        <header>
+          <h1 class="article-title">Holit či neholit? Vliv vousů na vnímanou atraktivitu mužských tváří</h1>
+          <p class="article-authors">Šimon Očkáš, Jan Suchý, Amálie Vlasáková</p>
+          <p class="article-affiliations">Katedra psychologie, Filozofická fakulta Univerzity Karlovy</p>
+        </header>
+
+        <section id="abstract" class="abstract-box">
+          <h3>Abstrakt</h3>
+          <p>
+            Tato vědecká studie zkoumá vliv specifických úprav vousů na vnímanou fyzickou atraktivitu mužů. 
+            Na rozdíl od předchozích výzkumů zaměřených na lineární hustotu strniště přináší tato práce metodologickou 
+            inovaci v podobě inkluze kníru a využitím vysoce realistických stimulů generovaných umělou inteligencí. 
+            Výsledky ukazují, že plnovous statisticky významně zvyšuje hodnocení atraktivity tváře oproti hladce 
+            oholené tváři, zatímco samotný knír hodnocení snižuje.
+          </p>
+        </section>
+
+        <div class="article-body">
+          <section id="uvod">
+            <h2>Úvod</h2>
+            <p>
+              Fyzická atraktivita hraje klíčovou roli v lidské sociální interakci, sekundárním výběru partnera 
+              i při utváření prvního dojmu. Vousy představují jeden z nejvýraznějších sekundárních pohlavních znaků 
+              u mužů...
+            </p>
+          </section>
+
+          <section id="metody">
+            <h2>Metodologie</h2>
+            <p>
+              Do výzkumu bylo zahrnuto 218 participantů (158 žen a 60 mužů), kteří posuzovali sadu standardizovaných 
+              mužských stimulů vygenerovaných pomocí generativních AI modelů...
+            </p>
+          </section>
+
+          <section id="analyza">
+            <h2>Statistická analýza</h2>
+            <p>
+              Data byla analyzována pomocí lineárního smíšeného modelu (LMM) v prostředí Jamovi (balíček GAMLJ; Gallucci, 2019). 
+              Model zahrnoval fixní efekty typu vousů (<em>Beardedness</em>) a pohlaví hodnotitelů (<em>Gender</em>)...
+            </p>
+          </section>
+
+          <section id="vysledky">
+            <h2>Výsledky</h2>
+            <p>
+              Deskritivní statistiky ukazují, že nejvyšší průměrné hodnocení atraktivity získaly tváře s plnovousem 
+              (<em>M</em> = 3.77, <em>SD</em> = 1.53), následované hladce oholenými tvářemi (<em>M</em> = 3.49, <em>SD</em> = 1.51) 
+              a tvářemi s knírem (<em>M</em> = 3.33, <em>SD</em> = 1.53)...
+            </p>
+          </section>
+
+          <section id="diskuse">
+            <h2>Diskuse</h2>
+            <p>
+              Zjištěné výsledky potvrzují hypotézu, že kompletní úprava vousů (plnovous) funguje jako pozitivní 
+              signál atraktivity, zatímco parciální úpravy (knír) mohou vyvolávat rozporuplné estetické reakce...
+            </p>
+          </section>
+
+          <section id="literatura">
+            <h2>Literatura</h2>
+            <p>
+              Gallucci, M. (2019). GAMLj: General Analyses for Linear Models. [Jamovi module].<br>
+              Dixson, B. J., & Brooks, R. C. (2013). The role of facial hair in women's perceptions of men's attractiveness...
+            </p>
+          </section>
+        </div>
+      </article>
+    </main>
+
+  </div>
+
+</body>
+</html>
