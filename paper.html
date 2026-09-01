@@ -72,6 +72,32 @@
       box-shadow: 0 2px 6px rgba(0,0,0,0.03);
     }
 
+    /* Back to Index Button */
+    a.back-link {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.3rem;
+      font-family: var(--font-sans);
+      font-size: 0.85rem;
+      font-weight: 600;
+      color: var(--accent-color);
+      text-decoration: none;
+      padding: 0.4rem 0.75rem;
+      background-color: #e7f1ff;
+      border-radius: 6px;
+      margin-bottom: 1.25rem;
+      transition: background-color 0.2s ease, color 0.2s ease;
+      width: 100%;
+      box-sizing: border-box;
+      justify-content: center;
+    }
+
+    a.back-link:hover {
+      background-color: #d0e2ff;
+      color: #0b5ed7;
+      text-decoration: none;
+    }
+
     nav.toc-sidebar h2 {
       font-size: 1rem;
       margin-top: 0;
@@ -93,7 +119,7 @@
       margin-bottom: 0.4rem;
     }
 
-    nav.toc-sidebar a {
+    nav.toc-sidebar a.toc-item {
       color: var(--text-color);
       text-decoration: none;
       transition: all 0.2s ease;
@@ -104,12 +130,12 @@
       border-radius: 0 4px 4px 0;
     }
 
-    nav.toc-sidebar a:hover {
+    nav.toc-sidebar a.toc-item:hover {
       color: var(--accent-color);
     }
 
     /* Active State for Currently In-View Main Section */
-    nav.toc-sidebar a.active {
+    nav.toc-sidebar a.toc-item.active {
       color: var(--accent-color);
       font-weight: 600;
       border-left-color: var(--accent-color);
@@ -360,17 +386,18 @@
 
   <div class="layout-container">
     
-    <!-- Table of Contents Navigation (Level 1 Headings Only) -->
+    <!-- Table of Contents Navigation -->
     <nav class="toc-sidebar" aria-label="Obsah dokumentu">
+      <a href="index.html" class="back-link">← Zpět na přehled</a>
       <h2>Obsah</h2>
       <ul>
-        <li><a href="#uvod">Úvod</a></li>
-        <li><a href="#metodologie">Metodologie</a></li>
-        <li><a href="#vysledky">Výsledky</a></li>
-        <li><a href="#diskuse">Diskuse</a></li>
-        <li><a href="#zaver">Závěr</a></li>
-        <li><a href="#reference">Reference</a></li>
-        <li><a href="#priloha">Příloha</a></li>
+        <li><a href="#uvod" class="toc-item">Úvod</a></li>
+        <li><a href="#metodologie" class="toc-item">Metodologie</a></li>
+        <li><a href="#vysledky" class="toc-item">Výsledky</a></li>
+        <li><a href="#diskuse" class="toc-item">Diskuse</a></li>
+        <li><a href="#zaver" class="toc-item">Závěr</a></li>
+        <li><a href="#reference" class="toc-item">Reference</a></li>
+        <li><a href="#priloha" class="toc-item">Příloha</a></li>
       </ul>
     </nav>
 
@@ -388,40 +415,40 @@
       <section id="uvod">
         <h1>Úvod</h1>
         <p>
-          Vousy představují jeden z nejvýraznějších sekundárních pohlavních znaků mužské tváře a dlouhodobě jsou předmětem zájmu evoluční psychologie a výzkumu percepce obličejů[cite: 4]. Muži s vousy jsou ženami vnímáni jako starší, s vyšším sociálním statusem a lepšími rodičovskými dovednostmi <a href="#ref-dixson2013" class="citation">(Dixson &amp; Brooks, 2013)</a>, zároveň je však ochlupení mužské tváře spojováno s vyšší mírou agrese a dominance <a href="#ref-dixson2012" class="citation">(Dixson &amp; Vasey, 2012)</a>[cite: 4]. Právě tato ambivalence – kdy vousy signalizují jak žádoucí, tak potenciálně méně žádoucí vlastnost – může přispívat k odlišným výsledkům týkajícím se jejich vlivu na atraktivitu napříč studiemi i jednotlivými hodnotiteli <a href="#ref-janif2014" class="citation">(Janif et al., 2014)</a>[cite: 4].
+          Vousy představují jeden z nejvýraznějších sekundárních pohlavních znaků mužské tváře a dlouhodobě jsou předmětem zájmu evoluční psychologie a výzkumu percepce obličejů. Muži s vousy jsou ženami vnímáni jako starší, s vyšším sociálním statusem a lepšími rodičovskými dovednostmi <a href="#ref-dixson2013" class="citation">(Dixson &amp; Brooks, 2013)</a>, zároveň je však ochlupení mužské tváře spojováno s vyšší mírou agrese a dominance <a href="#ref-dixson2012" class="citation">(Dixson &amp; Vasey, 2012)</a>. Právě tato ambivalence – kdy vousy signalizují jak žádoucí, tak potenciálně méně žádoucí vlastnost – může přispívat k odlišným výsledkům týkajícím se jejich vlivu na atraktivitu napříč studiemi i jednotlivými hodnotiteli <a href="#ref-janif2014" class="citation">(Janif et al., 2014)</a>.
         </p>
         <p>
-          Dosavadní výzkum se přitom soustředil zejména na lineární manipulaci hustoty strniště <a href="#ref-dixson2013" class="citation">(Dixson &amp; Brooks, 2013)</a>, tedy na kontinuum od hladce oholeného obličeje po plnovous, zatímco menší pozornost byla věnována odlišným stylům vousů[cite: 4]. Novější studie proto upozorňují na potřebu zkoumat také specifické styly, například samostatný knír <a href="#ref-gray2020" class="citation">(Gray et al., 2020)</a>[cite: 4].
+          Dosavadní výzkum se přitom soustředil zejména na lineární manipulaci hustoty strniště <a href="#ref-dixson2013" class="citation">(Dixson &amp; Brooks, 2013)</a>, tedy na kontinuum od hladce oholeného obličeje po plnovous, zatímco menší pozornost byla věnována odlišným stylům vousů. Novější studie proto upozorňují na potřebu zkoumat také specifické styly, například samostatný knír <a href="#ref-gray2020" class="citation">(Gray et al., 2020)</a>.
         </p>
         <p>
-          Další nekonzistence v literatuře se týká role výchozí atraktivity tváře[cite: 4]. Vousy mohou částečně zakrývat některé rysy obličeje, a potenciálně tak měnit jejich celkové vnímání[cite: 4]. Některé studie naznačují, že mohou působit jako kompenzační mechanismus u méně atraktivních tváří, tedy jako určitý „upgrade“, zatímco u vysoce atraktivních tváří může být jejich přínos menší nebo dokonce negativní <a href="#ref-dixson2016" class="citation">(Dixson et al., 2016)</a>[cite: 4]. Otázkou rovněž zůstává, zda se vnímání vlivu vousů na atraktivitu liší mezi mužskými a ženskými hodnotiteli[cite: 4]. Zatímco některé studie zaměřené na sociální atributy, jako je status nebo dominance, rozdíly mezi pohlavími hodnotitelů nacházejí, jiné práce zaměřené přímo na preference týkající se mužského ochlupení významné rozdíly neprokazují <a href="#ref-jach2020" class="citation">(Jach &amp; Moroń, 2020)</a>[cite: 4]. Tato nejednotnost může souviset s tím, že jednotlivé studie sledují odlišné charakteristiky mužské tváře a jejího vnímání[cite: 4].
+          Další nekonzistence v literatuře se týká role výchozí atraktivity tváře. Vousy mohou částečně zakrývat některé rysy obličeje, a potenciálně tak měnit jejich celkové vnímání. Některé studie naznačují, že mohou působit jako kompenzační mechanismus u méně atraktivních tváří, tedy jako určitý „upgrade“, zatímco u vysoce atraktivních tváří může být jejich přínos menší nebo dokonce negativní <a href="#ref-dixson2016" class="citation">(Dixson et al., 2016)</a>. Otázkou rovněž zůstává, zda se vnímání vlivu vousů na atraktivitu liší mezi mužskými a ženskými hodnotiteli. Zatímco některé studie zaměřené na sociální atributy, jako je status nebo dominance, rozdíly mezi pohlavími hodnotitelů nacházejí, jiné práce zaměřené přímo na preference týkající se mužského ochlupení významné rozdíly neprokazují <a href="#ref-jach2020" class="citation">(Jach &amp; Moroń, 2020)</a>. Tato nejednotnost může souviset s tím, že jednotlivé studie sledují odlišné charakteristiky mužské tváře a jejího vnímání.
         </p>
         <p>
-          Dalším omezením dosavadního výzkumu je kontrola vizuálních stimulů[cite: 4]. Studie využívající neupravené fotografie reálných osob mohou být ovlivněny proměnnými, které nelze mezi jednotlivými podmínkami zcela standardizovat, například výrazem tváře nebo podmínkami fotografování <a href="#ref-dixson2013" class="citation">(Dixson &amp; Brooks, 2013)</a>[cite: 4]. Naopak tradiční digitální manipulace fotografií (např. manuální kompozity) může vést k vizuálním artefaktům a snížení realismu stimulů <a href="#ref-nightingale2022" class="citation">(Nightingale &amp; Farid, 2022)</a>[cite: 4].
+          Dalším omezením dosavadního výzkumu je kontrola vizuálních stimulů. Studie využívající neupravené fotografie reálných osob mohou být ovlivněny proměnnými, které nelze mezi jednotlivými podmínkami zcela standardizovat, například výrazem tváře nebo podmínkami fotografování <a href="#ref-dixson2013" class="citation">(Dixson &amp; Brooks, 2013)</a>. Naopak tradiční digitální manipulace fotografií (např. manuální kompozity) může vést k vizuálním artefaktům a snížení realismu stimulů <a href="#ref-nightingale2022" class="citation">(Nightingale &amp; Farid, 2022)</a>.
         </p>
         <p>
-          Cílem naší studie bylo tyto mezery adresovat pomocí metodologicky robustnějšího přístupu[cite: 4]. Použili jsme vysoce realistické stimuly generované pomocí umělé inteligence, které byly kalibrovány v nezávislé pilotní studii, a kromě plnovousu jsme zahrnuli také knír jako samostatnou experimentální podmínku[cite: 4]. Zaměřili jsme se na tři otázky: (1) zda typ vousů (hladce oholeno, plnovous, knír) ovlivňuje vnímanou atraktivitu mužské tváře, (2) zda se tento efekt liší v závislosti na pohlaví hodnotitele a (3) zda jeho velikost závisí na výchozí atraktivitě hodnocené tváře[cite: 4]. Na základě předchozího výzkumu jsme předpokládali, že typ vousů ovlivní hodnocení atraktivity (H1), že velikost tohoto efektu se bude lišit mezi mužskými a ženskými hodnotiteli (H2) a že efekt vousů bude záviset na výchozí atraktivitě tváře (H3), přičemž jsme očekávali výraznější pozitivní efekt vousů u méně atraktivních tváří[cite: 4].
+          Cílem naší studie bylo tyto mezery adresovat pomocí metodologicky robustnějšího přístupu. Použili jsme vysoce realistické stimuly generované pomocí umělé inteligence, které byly kalibrovány v nezávislé pilotní studii, a kromě plnovousu jsme zahrnuli také knír jako samostatnou experimentální podmínku. Zaměřili jsme se na tři otázky: (1) zda typ vousů (hladce oholeno, plnovous, knír) ovlivňuje vnímanou atraktivitu mužské tváře, (2) zda se tento efekt liší v závislosti na pohlaví hodnotitele a (3) zda jeho velikost závisí na výchozí atraktivitě hodnocené tváře. Na základě předchozího výzkumu jsme předpokládali, že typ vousů ovlivní hodnocení atraktivity (H1), že velikost tohoto efektu se bude lišit mezi mužskými a ženskými hodnotiteli (H2) a že efekt vousů bude záviset na výchozí atraktivitě tváře (H3), přičemž jsme očekávali výraznější pozitivní efekt vousů u méně atraktivních tváří.
         </p>
       </section>
 
       <section id="metodologie">
         <h1>Metodologie</h1>
         <p>
-          Pro výzkum byl zvolen smíšený experimentální design, ve kterém participanti hodnotili atraktivitu hyperrealistických fotografií mužských tváří na 7-bodové Likertově škále (1 = nejnižší atraktivita, 7 = nejvyšší atraktivita)[cite: 4]. Stimuly byly vygenerovány pomocí generativního modelu StyleGAN2 <a href="#ref-karras2020" class="citation">(Karras et al., 2020)</a>[cite: 4]. Využití syntetických stimulů namísto standardizovaných databází (např. Chicago Face Database; <a href="#ref-ma2015" class="citation">Ma et al., 2015</a>) bylo motivováno potřebou plné experimentální kontroly a nutností systematicky modifikovat tvářové ochlupení při zachování konstantních obličejových rysů[cite: 4].
+          Pro výzkum byl zvolen smíšený experimentální design, ve kterém participanti hodnotili atraktivitu hyperrealistických fotografií mužských tváří na 7-bodové Likertově škále (1 = nejnižší atraktivita, 7 = nejvyšší atraktivita). Stimuly byly vygenerovány pomocí generativního modelu StyleGAN2 <a href="#ref-karras2020" class="citation">(Karras et al., 2020)</a>. Využití syntetických stimulů namísto standardizovaných databází (např. Chicago Face Database; <a href="#ref-ma2015" class="citation">Ma et al., 2015</a>) bylo motivováno potřebou plné experimentální kontroly a nutností systematicky modifikovat tvářové ochlupení při zachování konstantních obličejových rysů.
         </p>
 
         <figure>
           <img src="images/figure1-facial-harmony-modification.png" alt="Ukázka generativní modifikace obličejové harmonie">
-          <figcaption><strong>Obrázek 1:</strong> Ukázka generativní modifikace obličejové harmonie u kandidátních stimulů[cite: 4]</figcaption>
+          <figcaption><strong>Obrázek 1:</strong> Ukázka generativní modifikace obličejové harmonie u kandidátních stimulů</figcaption>
         </figure>
 
         <p>
-          Nejprve byla provedena pilotní studie ($N = 58$) za účelem validace a selekce kandidátních stimulů[cite: 4]. Participanti v pilotáži hodnotili 75 stimulů mužských tváří se ženskými distraktory[cite: 4]. Pro zajištění dostatečného rozpětí atraktivity byl výchozí soubor obohacen o extrémní varianty vytvořené pomocí latentních difúzních modelů <a href="#ref-rombach2022" class="citation">(Rombach et al., 2022)</a> konkrétně Nano Banana Pro <a href="#ref-google2025" class="citation">(Google DeepMind, 2025)</a> a softwaru Adobe Photoshop <a href="#ref-adobe2026" class="citation">(Adobe Inc., 2026)</a>[cite: 4]. Provedené úpravy směřovaly buď k maximalizaci obličejové harmonie (<em>beautification</em>), nebo k vytvoření strukturální asymetrie (<em>uglification</em>; viz Obrázek 1; přesná znění promptů jsou uvedena v Příloze)[cite: 4]. Stimuly byly prezentovány po dobu 1000 ms <a href="#ref-willis2006" class="citation">(Willis &amp; Todorov, 2006)</a> s předcházejícím fixačním křížem s variabilním trváním 500–800 ms (<em>jittering</em>) pro zamezení časové anticipace <a href="#ref-niemi1981" class="citation">(Niemi &amp; Näätänen, 1981)</a>[cite: 4].
+          Nejprve byla provedena pilotní studie ($N = 58$) za účelem validace a selekce kandidátních stimulů. Participanti v pilotáži hodnotili 75 stimulů mužských tváří se ženskými distraktory. Pro zajištění dostatečného rozpětí atraktivity byl výchozí soubor obohacen o extrémní varianty vytvořené pomocí latentních difúzních modelů <a href="#ref-rombach2022" class="citation">(Rombach et al., 2022)</a> konkrétně Nano Banana Pro <a href="#ref-google2025" class="citation">(Google DeepMind, 2025)</a> a softwaru Adobe Photoshop <a href="#ref-adobe2026" class="citation">(Adobe Inc., 2026)</a>. Provedené úpravy směřovaly buď k maximalizaci obličejové harmonie (<em>beautification</em>), nebo k vytvoření strukturální asymetrie (<em>uglification</em>; viz Obrázek 1; přesná znění promptů jsou uvedena v Příloze). Stimuly byly prezentovány po dobu 1000 ms <a href="#ref-willis2006" class="citation">(Willis &amp; Todorov, 2006)</a> s předcházejícím fixačním křížem s variabilním trváním 500–800 ms (<em>jittering</em>) pro zamezení časové anticipace <a href="#ref-niemi1981" class="citation">(Niemi &amp; Näätänen, 1981)</a>.
         </p>
 
         <h2 id="selekce-stimulu">Selekce stimulů a index RCI</h2>
         <p>
-          Selekce stimulů do finálního experimentu probíhala na základě dat z pilotní studie prostřednictvím autorského indexu reprezentativnosti a konzistentnosti (<em>Representativeness Consistency Index</em>, RCI)[cite: 4]. Škála hodnocení byla rozčleňená do tří cílových kohort: <em>low</em> (1–3), <em>mid</em> (3–5) a <em>high</em> (5–7)[cite: 4]. Pro experimentální vzorek byl vzorec RCI definován jako:
+          Selekce stimulů do finálního experimentu probíhala na základě dat z pilotní studie prostřednictvím autorského indexu reprezentativnosti a konzistentnosti (<em>Representativeness Consistency Index</em>, RCI). Škála hodnocení byla rozčleňená do tří cílových kohort: <em>low</em> (1–3), <em>mid</em> (3–5) a <em>high</em> (5–7). Pro experimentální vzorek byl vzorec RCI definován jako:
         </p>
 
         <div class="equation-container">
@@ -429,34 +456,34 @@
         </div>
 
         <p>
-          kde $\bar{x}$ je průměrné hodnocení stimulu v pilotáži, $SD$ je jeho směrodatná odchylka a $T$ představuje středový cíl dané kohorty ($T_{\text{low}} = 2.0$; $T_{\text{mid}} = 4.0$; $T_{\text{high}} = 6.0$)[cite: 4]. Vyšší skóre RCI indikuje vysokou reprezentativnost pro danou kohortu při současně nízké variabilitě hodnocení[cite: 4].
+          kde $\bar{x}$ je průměrné hodnocení stimulu v pilotáži, $SD$ je jeho směrodatná odchylka a $T$ představuje středový cíl dané kohorty ($T_{\text{low}} = 2.0$; $T_{\text{mid}} = 4.0$; $T_{\text{high}} = 6.0$). Vyšší skóre RCI indikuje vysokou reprezentativnost pro danou kohortu při současně nízké variabilitě hodnocení.
         </p>
         <p>
-          Pro kalibrační vzorek byl použit alternativní vzorec s cílovými hodnotami posunutými k extrémům škály ($T_{\text{low}} = 1.0$; $T_{\text{mid}} = 4.0$; $T_{\text{high}} = 7.0$) s cílem ukotvit referenční rámec hodnocení (tzv. <em>anchoring</em>; <a href="#ref-parducci1965" class="citation">Parducci, 1965</a>)[cite: 4]. Na základě RCI bylo nejprve vybráno 6 kalibračních stimulů v rovnoměrném zastoupení (2 stimuly pro každou ze tří kategorií; poměr 1:1:1)[cite: 4]. Tento kompromisní rozsah byl zvolen tak, aby zajistil spolehlivé ukotvení obou extrémů škály, a zároveň minimalizoval únavu participantů, která by při větším počtu kalibračních trialů v kombinaci s již tak rozsáhlým podnětovým materiálem mohla negativně ovlivnit pozornost[cite: 4]. Následně bylo vybráno 21 experimentálních identit (7 v každé kohortě)[cite: 4]. Ze zbývajících stimulů bylo vybráno celkem 21 distraktorů, čímž byl stanoven požadovaný celkový poměr 1:4 vůči experimentálním stimulům[cite: 4]. Jejich rozložení v poměru 5:11:5 bylo zvoleno tak, aby se na rozdíl od uniformního rozložení (1:1:1) více přibližovalo normálnímu rozdělení atraktivity v populaci, a tím zvyšovalo ekologickou validitu podnětového materiálu <a href="#ref-brunswik1955" class="citation">(Brunswik, 1955)</a>[cite: 4].
+          Pro kalibrační vzorek byl použit alternativní vzorec s cílovými hodnotami posunutými k extrémům škály ($T_{\text{low}} = 1.0$; $T_{\text{mid}} = 4.0$; $T_{\text{high}} = 7.0$) s cílem ukotvit referenční rámec hodnocení (tzv. <em>anchoring</em>; <a href="#ref-parducci1965" class="citation">Parducci, 1965</a>). Na základě RCI bylo nejprve vybráno 6 kalibračních stimulů v rovnoměrném zastoupení (2 stimuly pro každou ze tří kategorií; poměr 1:1:1). Tento kompromisní rozsah byl zvolen tak, aby zajistil spolehlivé ukotvení obou extrémů škály, a zároveň minimalizoval únavu participantů, která by při větším počtu kalibračních trialů v kombinaci s již tak rozsáhlým podnětovým materiálem mohla negativně ovlivnit pozornost. Následně bylo vybráno 21 experimentálních identit (7 v každé kohortě). Ze zbývajících stimulů bylo vybráno celkem 21 distraktorů, čímž byl stanoven požadovaný celkový poměr 1:4 vůči experimentálním stimulům. Jejich rozložení v poměru 5:11:5 bylo zvoleno tak, aby se na rozdíl od uniformního rozložení (1:1:1) více přibližovalo normálnímu rozdělení atraktivity v populaci, a tím zvyšovalo ekologickou validitu podnětového materiálu <a href="#ref-brunswik1955" class="citation">(Brunswik, 1955)</a>.
         </p>
 
         <figure>
           <img src="images/figure2-facial-hair-variants.png" alt="Přehled experimentálních variant tvářového ochlupení">
-          <figcaption><strong>Obrázek 2:</strong> Přehled experimentálních variant tvářového ochlupení u jedné identity[cite: 4]</figcaption>
+          <figcaption><strong>Obrázek 2:</strong> Přehled experimentálních variant tvářového ochlupení u jedné identity</figcaption>
         </figure>
 
         <p>
-          Vybraných 21 experimentálních identit bylo následně upraveno do tří variant tvářového ochlupení (oholený – <em>clean</em>, knír – <em>stache</em>, plnovous – <em>beard</em>; viz Obrázek 2; prompty v Příloze)[cite: 4]. Vizuální konstantnost byla zajištěna tak, že základ tvořil čistý raster oholené tváře a varianty vousů byly aplikovány jako maskované vrstvy v Adobe Photoshop; pixely mimo definované oblasti ochlupení tak zůstaly zachovány bez změn[cite: 4]. Celkový podnětový materiál tvořilo 84 trialů (63 experimentálních stimulů + 21 distraktorů)[cite: 4].
+          Vybraných 21 experimentálních identit bylo následně upraveno do tří variant tvářového ochlupení (oholený – <em>clean</em>, knír – <em>stache</em>, plnovous – <em>beard</em>; viz Obrázek 2; prompty v Příloze). Vizuální konstantnost byla zajištěna tak, že základ tvořil čistý raster oholené tváře a varianty vousů byly aplikovány jako maskované vrstvy v Adobe Photoshop; pixely mimo definované oblasti ochlupení tak zůstaly zachovány bez změn. Celkový podnětový materiál tvořilo 84 trialů (63 experimentálních stimulů + 21 distraktorů).
         </p>
 
         <h2 id="procedura">Procedura a kontrola zkreslení</h2>
         <p>
-          Časové parametry prezentace stimulů byly ve finálním experimentu zachovány v identické podobě jako v pilotní studii: každý trial začínal fixačním křížem s variabilním trváním 500–800 ms (<em>jittering</em>) pro zamezení časové anticipace <a href="#ref-niemi1981" class="citation">(Niemi &amp; Näätänen, 1981)</a>, po čemž následovala expozice stimulu po dobu 1000 ms <a href="#ref-willis2006" class="citation">(Willis &amp; Todorov, 2006)</a>[cite: 4]. Prezentace 84 trialů probíhala v pseudorandomizovaném pořadí rozděleném do 21 uniformních bloků po čtyřech trialech (1 distraktor a 3 experimentální stimuly)[cite: 4]. Algoritmus vynucoval odstup minimálně 10 trialů mezi opětovným zobrazením stejné identity, čehož cílem bylo minimalizovat riziko přímého porovnávání a vizuálního primingu <a href="#ref-greenwald1976" class="citation">(Greenwald, 1976)</a>[cite: 4].
+          Časové parametry prezentace stimulů byly ve finálním experimentu zachovány v identické podobě jako v pilotní studii: každý trial začínal fixačním křížem s variabilním trváním 500–800 ms (<em>jittering</em>) pro zamezení časové anticipace <a href="#ref-niemi1981" class="citation">(Niemi &amp; Näätänen, 1981)</a>, po čemž následovala expozice stimulu po dobu 1000 ms <a href="#ref-willis2006" class="citation">(Willis &amp; Todorov, 2006)</a>. Prezentace 84 trialů probíhala v pseudorandomizovaném pořadí rozděleném do 21 uniformních bloků po čtyřech trialech (1 distraktor a 3 experimentální stimuly). Algoritmus vynucoval odstup minimálně 10 trialů mezi opětovným zobrazením stejné identity, čehož cílem bylo minimalizovat riziko přímého porovnávání a vizuálního primingu <a href="#ref-greenwald1976" class="citation">(Greenwald, 1976)</a>.
         </p>
 
         <h2 id="vzorek">Vzorek a vylučovací kritéria</h2>
         <p>
-          Z původního počtu 283 participantů bylo z analýzy vyřazeno 65 osob[cite: 4]. Důvody vyloučení tvořily: účast v pilotní studii ($n = 19$; zamezení efektům opakovaného testování; <a href="#ref-shadish2002" class="citation">Shadish et al., 2002</a>), věk pod 18 let ($n = 42$), jiná než česká nebo slovenská národnost ($n = 3$) a neuvedení binárního pohlaví ($n = 1$; extrémně nízké zastoupení pro srovnání v modelu)[cite: 4]. Finální vzorek tvořilo $N = 218$ participantů (158 žen, 60 mužů; $M_{\text{Age}} = 30.86$, $SD = 13.14$)[cite: 4].
+          Z původního počtu 283 participantů bylo z analýzy vyřazeno 65 osob. Důvody vyloučení tvořily: účast v pilotní studii ($n = 19$; zamezení efektům opakovaného testování; <a href="#ref-shadish2002" class="citation">Shadish et al., 2002</a>), věk pod 18 let ($n = 42$), jiná než česká nebo slovenská národnost ($n = 3$) a neuvedení binárního pohlaví ($n = 1$; extrémně nízké zastoupení pro srovnání v modelu). Finální vzorek tvořilo $N = 218$ participantů (158 žen, 60 mužů; $M_{\text{Age}} = 30.86$, $SD = 13.14$).
         </p>
 
         <h2 id="statistika">Statistická analýza</h2>
         <p>
-          Data byla analyzována pomocí lineárního smíšeného modelu (LMM) v prostředí Jamovi (balíček GAMLJ; <a href="#ref-gallucci2019" class="citation">Gallucci, 2019</a>)[cite: 4]. Model byl specifikován následovně:
+          Data byla analyzována pomocí lineárního smíšeného modelu (LMM) v prostředí Jamovi (balíček GAMLJ; <a href="#ref-gallucci2019" class="citation">Gallucci, 2019</a>). Model byl specifikován následovně:
         </p>
 
         <div class="equation-container">
@@ -467,19 +494,19 @@
         </div>
 
         <p>
-          Kategorický faktor typu vousů (<em>beardedness</em>; referenční úroveň: <em>clean</em>) a pohlaví (<em>Gender</em>) tvořily fixní efekty[cite: 4]. Kovariáty hodnocení atraktivity (<em>Attractiveness</em>; výchozí atraktivita z-scored), věk (<em>Age</em>) a pořadí (<em>Order</em>) byly centrovány na průměr[cite: 4]. Náhodná struktura zahrnovala náhodný intercept pro participanty[cite: 4]. Parametry byly odhadnuty metodou REML s aproximací stupňů volnosti podle Satterthwaitea[cite: 4].
+          Kategorický faktor typu vousů (<em>beardedness</em>; referenční úroveň: <em>clean</em>) a pohlaví (<em>Gender</em>) tvořily fixní efekty. Kovariáty hodnocení atraktivity (<em>Attractiveness</em>; výchozí atraktivita z-scored), věk (<em>Age</em>) a pořadí (<em>Order</em>) byly centrovány na průměr. Náhodná struktura zahrnovala náhodný intercept pro participanty. Parametry byly odhadnuty metodou REML s aproximací stupňů volnosti podle Satterthwaitea.
         </p>
       </section>
 
       <section id="vysledky">
         <h1>Výsledky</h1>
         <p>
-          Do analýzy bylo zahrnuto 218 participantů (158 žen a 60 mužů), kteří poskytli celkem 11 063 jednotlivých hodnocení[cite: 4]. Hodnocení atraktivity byla analyzována pomocí lineárního smíšeného modelu, který zohledňoval variabilitu mezi participanty a jednotlivými stimuly[cite: 4]. Model vysvětloval 55 % celkové variability v hodnocení atraktivity (kondicionální $R^2 = .55$; $\text{ICC} = .31$), přičemž fixní efekty vysvětlovaly 35 % variability (marginální $R^2 = .35$; viz Tabulka 1)[cite: 4].
+          Do analýzy bylo zahrnuto 218 participantů (158 žen a 60 mužů), kteří poskytli celkem 11 063 jednotlivých hodnocení. Hodnocení atraktivity byla analyzována pomocí lineárního smíšeného modelu, který zohledňoval variabilitu mezi participanty a jednotlivými stimuly. Model vysvětloval 55 % celkové variability v hodnocení atraktivity (kondicionální $R^2 = .55$; $\text{ICC} = .31$), přičemž fixní efekty vysvětlovaly 35 % variability (marginální $R^2 = .35$; viz Tabulka 1).
         </p>
 
         <div class="table-container">
           <table>
-            <caption><strong>Tabulka 1:</strong> Odhady fixních koeficientů lineárního smíšeného modelu[cite: 4]</caption>
+            <caption><strong>Tabulka 1:</strong> Odhady fixních koeficientů lineárního smíšeného modelu</caption>
             <thead>
               <tr>
                 <th rowspan="2" class="text-left">Effect</th>
@@ -591,12 +618,12 @@
         </div>
 
         <p>
-          Deskriptivní statistiky na úrovni všech hodnocení ukázaly, že nejvyšší průměrné hodnocení atraktivity získaly tváře s plnovousem ($M = 3.77$, $SD = 1.53$), následované hladce oholenými tvářemi ($M = 3.49$, $SD = 1.51$) a tvářemi s knírem ($M = 3.33$, $SD = 1.53$)[cite: 4]. Typ vousů měl statisticky významný vliv na hodnocení atraktivity, $F(2, 10856.68) = 132.40$, $p &lt; .001$[cite: 4]. Následná párová srovnání s Tukeyho korekcí (viz Tabulka 2) ukázala, že se všechny tři podmínky od sebe statisticky významně lišily[cite: 4]. Tváře s plnovousem byly hodnoceny jako atraktivnější než hladce oholené tváře ($\text{rozdíl} = 0.29$, $SE = 0.03$, $t(10863.62) = 10.50$, $p &lt; .001$) i než tváře s knírem ($\text{rozdíl} = 0.45$, $SE = 0.03$, $t(10851.82) = 16.01$, $p &lt; .001$)[cite: 4]. Hladce oholené tváře byly zároveň hodnoceny jako atraktivnější než tváře s knírem ($\text{rozdíl} = 0.15$, $SE = 0.03$, $t(10854.50) = 5.53$, $p &lt; .001$)[cite: 4]. Celkově tedy bylo pořadí průměrného hodnocení atraktivity plnovous &gt; hladce oholená tvář &gt; knír[cite: 4].
+          Deskriptivní statistiky na úrovni všech hodnocení ukázaly, že nejvyšší průměrné hodnocení atraktivity získaly tváře s plnovousem ($M = 3.77$, $SD = 1.53$), následované hladce oholenými tvářemi ($M = 3.49$, $SD = 1.51$) a tvářemi s knírem ($M = 3.33$, $SD = 1.53$). Typ vousů měl statisticky významný vliv na hodnocení atraktivity, $F(2, 10856.68) = 132.40$, $p &lt; .001$. Následná párová srovnání s Tukeyho korekcí (viz Tabulka 2) ukázala, že se všechny tři podmínky od sebe statisticky významně lišily. Tváře s plnovousem byly hodnoceny jako atraktivnější než hladce oholené tváře ($\text{rozdíl} = 0.29$, $SE = 0.03$, $t(10863.62) = 10.50$, $p &lt; .001$) i než tváře s knírem ($\text{rozdíl} = 0.45$, $SE = 0.03$, $t(10851.82) = 16.01$, $p &lt; .001$). Hladce oholené tváře byly zároveň hodnoceny jako atraktivnější než tváře s knírem ($\text{rozdíl} = 0.15$, $SE = 0.03$, $t(10854.50) = 5.53$, $p &lt; .001$). Celkově tedy bylo pořadí průměrného hodnocení atraktivity plnovous &gt; hladce oholená tvář &gt; knír.
         </p>
 
         <div class="table-container">
           <table>
-            <caption><strong>Tabulka 2:</strong> Párové post-hoc testy typů vousů[cite: 4]</caption>
+            <caption><strong>Tabulka 2:</strong> Párové post-hoc testy typů vousů</caption>
             <thead>
               <tr>
                 <th colspan="3" class="text-center">Comparison</th>
@@ -648,68 +675,68 @@
         </div>
 
         <p>
-          Vedle typu vousů byl statisticky významným prediktorem hodnocení také průměrný rating výchozí atraktivity konkrétního stimulu, $F(1, 10852.56) = 7736.89$, $p &lt; .001$[cite: 4]. Statisticky významné byly rovněž hlavní efekty pohlaví hodnotitele, $F(1, 218.40) = 9.67$, $p = .002$, pořadí prezentace stimulů, $F(1, 10999.52) = 10.69$, $p = .001$, a věku hodnotitele, $F(1, 211.04) = 4.29$, $p = .040$[cite: 4]. V případě pohlaví byl odhad hodnocení u mužů v průměru o 0.34 bodu vyšší než u žen, 95% CI [0.13, 0.56][cite: 4]. Tento rozdíl se však nepromítl do odlišného hodnocení jednotlivých typů vousů[cite: 4]. Interakce mezi pohlavím hodnotitele a typem vousů nebyla statisticky významná, $F(2, 10856.86) \approx 0$, $p = .995$[cite: 4]. Přestože tedy muži v průměru hodnotili tváře výše než ženy, vzorec hodnocení jednotlivých typů vousů byl u obou skupin obdobný (viz Obrázek 3)[cite: 4].
+          Vedle typu vousů byl statisticky významným prediktorem hodnocení také průměrný rating výchozí atraktivity konkrétního stimulu, $F(1, 10852.56) = 7736.89$, $p &lt; .001$. Statisticky významné byly rovněž hlavní efekty pohlaví hodnotitele, $F(1, 218.40) = 9.67$, $p = .002$, pořadí prezentace stimulů, $F(1, 10999.52) = 10.69$, $p = .001$, a věku hodnotitele, $F(1, 211.04) = 4.29$, $p = .040$. V případě pohlaví byl odhad hodnocení u mužů v průměru o 0.34 bodu vyšší než u žen, 95% CI [0.13, 0.56]. Tento rozdíl se však nepromítl do odlišného hodnocení jednotlivých typů vousů. Interakce mezi pohlavím hodnotitele a typem vousů nebyla statisticky významná, $F(2, 10856.86) \approx 0$, $p = .995$. Přestože tedy muži v průměru hodnotili tváře výše než ženy, vzorec hodnocení jednotlivých typů vousů byl u obou skupin obdobný (viz Obrázek 3).
         </p>
 
         <figure>
           <img src="images/figure3-attractiveness-ratings-by-gender.png" alt="Průměrné hodnocení atraktivity podle typu vousů u mužských a ženských hodnotitelů">
-          <figcaption><strong>Obrázek 3:</strong> Průměrné hodnocení atraktivity podle typu vousů u mužských a ženských hodnotitelů (stim_id_mean_rating=Mean)[cite: 4]</figcaption>
+          <figcaption><strong>Obrázek 3:</strong> Průměrné hodnocení atraktivity podle typu vousů u mužských a ženských hodnotitelů (stim_id_mean_rating=Mean)</figcaption>
         </figure>
 
         <p>
-          Dále byla zjištěna statisticky významná interakce mezi typem vousů a výchozí atraktivitou stimulu, $F(2, 10854.03) = 3.19$, $p = .041$[cite: 4]. Pro bližší posouzení této interakce byly analyzovány jednoduché efekty typu vousů při nízké ($-1\,SD$), průměrné a vysoké ($+1\,SD$) výchozí atraktivitě[cite: 4]. Při nízké výchozí atraktivitě byl plnovous hodnocen o 0.31 bodu výše než oholená varianta a o 0.40 bodu výše než varianta s knírem (obě $p &lt; .001$)[cite: 4]. Při průměrné výchozí atraktivitě činily tyto rozdíly 0.29, respektive 0.45 bodu (obě $p &lt; .001$), a při vysoké výchozí atraktivitě 0.28, respektive 0.49 bodu (obě $p &lt; .001$)[cite: 4]. Rozdíl mezi plnovousem a oholenou tváří se mezi nízkou a vysokou výchozí atraktivitou statisticky významně neměnil ($p = .486$)[cite: 4]. Interakce byla tedy spojena především se změnou rozdílu mezi variantou s knírem a oholenou tváří, přičemž tento rozdíl se u vysoce atraktivních stimulů mírně prohluboval – z 0.09 bodu při $-1\,SD$ na 0.21 bodu při $+1\,SD$ výchozí atraktivity[cite: 4].
+          Dále byla zjištěna statisticky významná interakce mezi typem vousů a výchozí atraktivitou stimulu, $F(2, 10854.03) = 3.19$, $p = .041$. Pro bližší posouzení této interakce byly analyzovány jednoduché efekty typu vousů při nízké ($-1\,SD$), průměrné a vysoké ($+1\,SD$) výchozí atraktivitě. Při nízké výchozí atraktivitě byl plnovous hodnocen o 0.31 bodu výše než oholená varianta a o 0.40 bodu výše než varianta s knírem (obě $p &lt; .001$). Při průměrné výchozí atraktivitě činily tyto rozdíly 0.29, respektive 0.45 bodu (obě $p &lt; .001$), a při vysoké výchozí atraktivitě 0.28, respektive 0.49 bodu (obě $p &lt; .001$). Rozdíl mezi plnovousem a oholenou tváří se mezi nízkou a vysokou výchozí atraktivitou statisticky významně neměnil ($p = .486$). Interakce byla tedy spojena především se změnou rozdílu mezi variantou s knírem a oholenou tváří, přičemž tento rozdíl se u vysoce atraktivních stimulů mírně prohluboval – z 0.09 bodu při $-1\,SD$ na 0.21 bodu při $+1\,SD$ výchozí atraktivity.
         </p>
       </section>
 
       <section id="diskuse">
         <h1>Diskuse</h1>
         <p>
-          Cílem studie bylo prozkoumat vliv různých typů mužského tvářového ochlupení na vnímanou atraktivitu, se zaměřením na rozdíly mezi pohlavími hodnotitelů a roli výchozí (hodnocené) atraktivity tváře[cite: 4]. Naše výsledky poskytují důkazy, že typ vousů statisticky významně ovlivňuje estetické vnímání mužské tváře (H1) a že se tento efekt do jisté míry liší podle výchozí atraktivity (H3)[cite: 4]. Co se týče rozdílů mezi hodnotiteli (H2), v datech se objevuje rozdíl v průměrné úrovni hodnocení mezi muži a ženami; vysvětlení takových rozdílů (např. odlišné kritérium hodnocení z pozice výběru partnera vs. širší sociální preference) je však pouze spekulativní, protože náš design a sběr dat tyto mechanismy přímo nezkoumají[cite: 4].
+          Cílem studie bylo prozkoumat vliv různých typů mužského tvářového ochlupení na vnímanou atraktivitu, se zaměřením na rozdíly mezi pohlavími hodnotitelů a roli výchozí (hodnocené) atraktivity tváře. Naše výsledky poskytují důkazy, že typ vousů statisticky významně ovlivňuje estetické vnímání mužské tváře (H1) a že se tento efekt do jisté míry liší podle výchozí atraktivity (H3). Co se týče rozdílů mezi hodnotiteli (H2), v datech se objevuje rozdíl v průměrné úrovni hodnocení mezi muži a ženami; vysvětlení takových rozdílů (např. odlišné kritérium hodnocení z pozice výběru partnera vs. širší sociální preference) je však pouze spekulativní, protože náš design a sběr dat tyto mechanismy přímo nezkoumají.
         </p>
         <p>
-          Pozorována byla jasná hierarchie preferencí: tváře s plnovousem byly hodnoceny jako nejatraktivnější, následovaly oholené tváře, zatímco tváře s knírem byly hodnoceny jako nejméně atraktivní[cite: 4]. Párová srovnání s Tukeyho korekcí potvrdila statistickou významnost všech rozdílů ($p_{\text{tukey}} &lt; .001$): plnovous překonával oholené tváře o +0,29 bodu a knír o +0,45 bodu, zatímco oholené tváře byly hodnoceny o +0,15 bodu výše než knír[cite: 4]. Z hlediska věcné významnosti představuje celkový efekt vousů modifikaci v rozsahu necelého půl bodu na 7-bodové škále, což ukazuje na sekundární, avšak konzistentní vliv stylizace tváře v porovnání s dominantní rolí obličejové morfologie[cite: 4]. Tento výsledek rozšiřuje dosavadní poznatky o pozitivním vlivu vousů na atraktivitu a potvrzuje, že specifické styly ochlupení nelze redukovat pouze na lineární kontinuum množství vousů <a href="#ref-gray2020" class="citation">(Gray et al., 2020)</a>. Penalizace kníru může odrážet současné sociokulturní normy v českém a slovenském kontextu, kde se samostatný knír vymyká aktuálním estetickým ideálům, případně může vizuálně narušovat plynulost obličejových proporcí[cite: 4]. Tyto výsledky je však nutné interpretovat v kontextu demografického složení našeho vzorku[cite: 4]. Sběr dat probíhal metodou příležitostného výběru (<em>convenience sampling</em>) primárně prostřednictvím sociální sítě Instagram[cite: 4]. Tento postup vedl ke specifickému demografickému rozložení, v němž dominovali mladší participanti, výrazně převažovaly ženy a lze předpokládat i vyšší zastoupení obyvatel z větších měst[cite: 4]. Naše zjištění proto odrážejí primárně preference této specifické demografické skupiny a nelze je bezvýhradně generalizovat na celou populaci[cite: 4].
+          Pozorována byla jasná hierarchie preferencí: tváře s plnovousem byly hodnoceny jako nejatraktivnější, následovaly oholené tváře, zatímco tváře s knírem byly hodnoceny jako nejméně atraktivní. Párová srovnání s Tukeyho korekcí potvrdila statistickou významnost všech rozdílů ($p_{\text{tukey}} &lt; .001$): plnovous překonával oholené tváře o +0,29 bodu a knír o +0,45 bodu, zatímco oholené tváře byly hodnoceny o +0,15 bodu výše než knír. Z hlediska věcné významnosti představuje celkový efekt vousů modifikaci v rozsahu necelého půl bodu na 7-bodové škále, což ukazuje na sekundární, avšak konzistentní vliv stylizace tváře v porovnání s dominantní rolí obličejové morfologie. Tento výsledek rozšiřuje dosavadní poznatky o pozitivním vlivu vousů na atraktivitu a potvrzuje, že specifické styly ochlupení nelze redukovat pouze na lineární kontinuum množství vousů <a href="#ref-gray2020" class="citation">(Gray et al., 2020)</a>. Penalizace kníru může odrážet současné sociokulturní normy v českém a slovenském kontextu, kde se samostatný knír vymyká aktuálním estetickým ideálům, případně může vizuálně narušovat plynulost obličejových proporcí. Tyto výsledky je však nutné interpretovat v kontextu demografického složení našeho vzorku. Sběr dat probíhal metodou příležitostného výběru (<em>convenience sampling</em>) primárně prostřednictvím sociální sítě Instagram. Tento postup vedl ke specifickému demografickému rozložení, v němž dominovali mladší participanti, výrazně převažovaly ženy a lze předpokládat i vyšší zastoupení obyvatel z větších měst. Naše zjištění proto odrážejí primárně preference této specifické demografické skupiny a nelze je bezvýhradně generalizovat na celou populaci.
         </p>
         <p>
-          Naše data ukazují, že muži udělovali v průměru mírně vyšší skóre atraktivity než ženy (+0,34 bodu; $p = .002$), přičemž interakce pohlaví $\times$ typ vousů nebyla významná, $F(2, 10856.86) \approx 0$, $p = .995$[cite: 4]. Tento vzorec znamená, že ačkoli se liší průměrná úroveň hodnocení, muži i ženy sdílejí obdobné preference týkající se pořadí typů vousů (plnovous &gt; oholené &gt; knír)[cite: 4]. Jakékoli vysvětlení rozdílu v průměrné úrovni — například rozdílné motivace nebo kontexty posuzování — je hypotetické a vyžadovalo by samostatné studie zaměřené na motivační nebo kontextuální faktory[cite: 4]. Tento výsledek koresponduje se závěry <a href="#ref-jach2020" class="citation">Jacha a Moroňa (2020)</a>, kteří naznačili, že preference ohledně mužského ochlupení jsou mezi oběma pohlavími vysoce kongruentní, pokud je měřeným konstruktem fyzická atraktivita, nikoliv evolučně zacílené sociální atributy jako dominance nebo rodičovský potenciál.
+          Naše data ukazují, že muži udělovali v průměru mírně vyšší skóre atraktivity než ženy (+0,34 bodu; $p = .002$), přičemž interakce pohlaví $\times$ typ vousů nebyla významná, $F(2, 10856.86) \approx 0$, $p = .995$. Tento vzorec znamená, že ačkoli se liší průměrná úroveň hodnocení, muži i ženy sdílejí obdobné preference týkající se pořadí typů vousů (plnovous &gt; oholené &gt; knír). Jakékoli vysvětlení rozdílu v průměrné úrovni — například rozdílné motivace nebo kontexty posuzování — je hypotetické a vyžadovalo by samostatné studie zaměřené na motivační nebo kontextuální faktory. Tento výsledek koresponduje se závěry <a href="#ref-jach2020" class="citation">Jacha a Moroňa (2020)</a>, kteří naznačili, že preference ohledně mužského ochlupení jsou mezi oběma pohlavími vysoce kongruentní, pokud je měřeným konstruktem fyzická atraktivita, nikoliv evolučně zacílené sociální atributy jako dominance nebo rodičovský potenciál.
         </p>
         <p>
-          Dále byla zjištěna statisticky významná interakce mezi typem vousů a výchozí atraktivitou stimulu, $F(2, 10854.03) = 3.19$, $p = .041$[cite: 4]. Pro bližší posouzení této interakce byly analyzovány jednoduché efekty při nízké ($-1\,SD$), průměrné a vysoké ($+1\,SD$) výchozí atraktivitě[cite: 4]. Při nízké výchozí atraktivitě byl plnovous hodnocen o 0.31 bodu výše než oholená varianta a o 0.40 bodu výše než varianta s knírem (obě $p &lt; .001$)[cite: 4]. Při průměrné výchozí atraktivitě činily tyto rozdíly 0.29, respektive 0.45 bodu (obě $p &lt; .001$), a při vysoké výchozí atraktivitě 0.28, respektive 0.49 bodu (obě $p &lt; .001$)[cite: 4]. Rozdíl mezi plnovousem a oholenou tváří se mezi nízkou a vysokou výchozí atraktivitou statisticky významně nelišil ($p = .486$)[cite: 4]. Analýza ukazuje, že hlavním zdrojem interakce je nikoli změna „upgradovací“ síly plnovousu, ale spíše to, že negativní efekt kníru roste u atraktivnějších tváří (rozdíl mezi knírem a oholenou verzí se zvětšil z 0.09 bodu u $-1\,SD$ na 0.21 bodu u $+1\,SD$)[cite: 4]. Interakci lze tedy popsat tak, že plnovous poskytuje relativně stabilní vizuální přínos napříč úrovněmi výchozí atraktivity, zatímco samostatný knír má relativně větší penalizaci u vysoce hodnocených tváří[cite: 4].
+          Dále byla zjištěna statisticky významná interakce mezi typem vousů a výchozí atraktivitou stimulu, $F(2, 10854.03) = 3.19$, $p = .041$. Pro bližší posouzení této interakce byly analyzovány jednoduché efekty při nízké ($-1\,SD$), průměrné a vysoké ($+1\,SD$) výchozí atraktivitě. Při nízké výchozí atraktivitě byl plnovous hodnocen o 0.31 bodu výše než oholená varianta a o 0.40 bodu výše než varianta s knírem (obě $p &lt; .001$). Při průměrné výchozí atraktivitě činily tyto rozdíly 0.29, respektive 0.45 bodu (obě $p &lt; .001$), a při vysoké výchozí atraktivitě 0.28, respektive 0.49 bodu (obě $p &lt; .001$). Rozdíl mezi plnovousem a oholenou tváří se mezi nízkou a vysokou výchozí atraktivitou statisticky významně nelišil ($p = .486$). Analýza ukazuje, že hlavním zdrojem interakce je nikoli změna „upgradovací“ síly plnovousu, ale spíše to, že negativní efekt kníru roste u atraktivnějších tváří (rozdíl mezi knírem a oholenou verzí se zvětšil z 0.09 bodu u $-1\,SD$ na 0.21 bodu u $+1\,SD$). Interakci lze tedy popsat tak, že plnovous poskytuje relativně stabilní vizuální přínos napříč úrovněmi výchozí atraktivity, zatímco samostatný knír má relativně větší penalizaci u vysoce hodnocených tváří.
         </p>
         <p>
-          Ačkoli studie využívá kombinaci generativních metod a ručního maskování, je třeba zdůraznit metrologický kompromis mezi vnitřní a ekologickou validitou[cite: 4]. Použití vrstvených masek v Adobe Photoshop umožnilo přesnou izolaci změn souvisejících s ochlupením a snížilo riziko nežádoucích úprav mimo maskované oblasti, avšak syntetické stimuly a jejich zpracování zároveň mohou omezit přenos výsledků do reálných sociálních interakcí[cite: 4]. Dále: expozice 1000 ms odpovídá paradigmatům časově omezeného posuzování a výsledky tak reflektují rychlé, časově limitované úsudky <a href="#ref-willis2006" class="citation">(Willis &amp; Todorov, 2006)</a>, které se mohou lišit od zdlouhavějšího, plně vědomého posuzování. Tyto omezení snižují možnost bezvýhradné generalizace a doporučujeme doplnit následné studie s reálnými fotografiemi a s delšími expozičními časy[cite: 4]. Geografické a demografické omezení vzorku navíc neumožňuje mezikulturní zobecnění[cite: 4].
+          Ačkoli studie využívá kombinaci generativních metod a ručního maskování, je třeba zdůraznit metrologický kompromis mezi vnitřní a ekologickou validitou. Použití vrstvených masek v Adobe Photoshop umožnilo přesnou izolaci změn souvisejících s ochlupením a snížilo riziko nežádoucích úprav mimo maskované oblasti, avšak syntetické stimuly a jejich zpracování zároveň mohou omezit přenos výsledků do reálných sociálních interakcí. Dále: expozice 1000 ms odpovídá paradigmatům časově omezeného posuzování a výsledky tak reflektují rychlé, časově limitované úsudky <a href="#ref-willis2006" class="citation">(Willis &amp; Todorov, 2006)</a>, které se mohou lišit od zdlouhavějšího, plně vědomého posuzování. Tyto omezení snižují možnost bezvýhradné generalizace a doporučujeme doplnit následné studie s reálnými fotografiemi a s delšími expozičními časy. Geografické a demografické omezení vzorku navíc neumožňuje mezikulturní zobecnění.
         </p>
         <p>
-          Budoucí výzkum by mohl tento metodologický rámec s AI stimuly aplikovat na hodnocení specifických osobnostních a sociálních rysů, jako je agresivita, dominance či důvěryhodnost <a href="#ref-dixson2012" class="citation">(Dixson &amp; Vasey, 2012)</a>, nebo zkoumat dynamiku hodnocení při neomezeném čase prezentace. Dále by bylo přínosné analyzovat jemnější nuance, jako je různá délka tvářového ochlupení (od lehkého strniště po plný vous)[cite: 4]. Ačkoliv předchozí studie již tento fenomén zkoumaly za pomoci manuálně vytvořených digitálních kompozitů na reálných fotografiích (např. <a href="#ref-dixson2013" class="citation">Dixson &amp; Brooks, 2013</a>), implementace moderních nástrojů generativní umělé inteligence v této oblasti představuje specifický metodologický kompromis[cite: 4]. Na jedné straně AI nástroje poskytují vysokou míru experimentální kontroly a povrchového fotorealismu[cite: 4]. Na straně druhé může být ekologická validita AI generovaných tváří paradoxně nižší než u manuálně upravovaných skutečných fotografií, protože generativní modely jsou založeny na syntéze obrovského množství dat, což vede k matematickému průměrování obličejových rysů, nerealistické symetrii a ztrátě přirozených nedokonalostí (tzv. <em>averaging bias</em>; <a href="#ref-nightingale2022" class="citation">Nightingale &amp; Farid, 2022</a>). I přes tyto inherentní limity však využití AI umožňuje detailně modelovat interakci mezi mírou ochlupení a morfologií tváře[cite: 4].
+          Budoucí výzkum by mohl tento metodologický rámec s AI stimuly aplikovat na hodnocení specifických osobnostních a sociálních rysů, jako je agresivita, dominance či důvěryhodnost <a href="#ref-dixson2012" class="citation">(Dixson &amp; Vasey, 2012)</a>, nebo zkoumat dynamiku hodnocení při neomezeném čase prezentace. Dále by bylo přínosné analyzovat jemnější nuance, jako je různá délka tvářového ochlupení (od lehkého strniště po plný vous). Ačkoliv předchozí studie již tento fenomén zkoumaly za pomoci manuálně vytvořených digitálních kompozitů na reálných fotografiích (např. <a href="#ref-dixson2013" class="citation">Dixson &amp; Brooks, 2013</a>), implementace moderních nástrojů generativní umělé inteligence v této oblasti představuje specifický metodologický kompromis. Na jedné straně AI nástroje poskytují vysokou míru experimentální kontroly a povrchového fotorealismu. Na straně druhé může být ekologická validita AI generovaných tváří paradoxně nižší než u manuálně upravovaných skutečných fotografií, protože generativní modely jsou založeny na syntéze obrovského množství dat, což vede k matematickému průměrování obličejových rysů, nerealistické symetrii a ztrátě přirozených nedokonalostí (tzv. <em>averaging bias</em>; <a href="#ref-nightingale2022" class="citation">Nightingale &amp; Farid, 2022</a>). I přes tyto inherentní limity však využití AI umožňuje detailně modelovat interakci mezi mírou ochlupení a morfologií tváře.
         </p>
       </section>
 
       <section id="zaver">
         <h1>Závěr</h1>
         <p>
-          V rámci použitého experimentálního designu a v daném vzorku jsme zjistili, že typ tvářového ochlupení systematicky ovlivňuje hodnocenou atraktivitu: plnovous byl spojen s konzistentním, i když relativně malým pozitivním efektem (~+0,30 bodu), zatímco samostatný knír vykazoval obecně negativní vliv, který byl silnější u tváří s vyšším bazálním hodnocením[cite: 4]. Nezjistili jsme důkazy, že by se preferenční vzorce typů vousů významně lišily mezi muži a ženami v rámci měřeného konstruktu[cite: 4]. Metodologicky studie ukazuje, že kombinace AI-generovaných stimulů a přesného maskování umožňuje vysokou míru experimentální kontroly, avšak tato kontrola má své limity z hlediska ekologické validity – další výzkum by měl ověřit, jak se výsledky přenášejí na reálné fotografie a do jiných kulturních kontextů[cite: 4].
+          V rámci použitého experimentálního designu a v daném vzorku jsme zjistili, že typ tvářového ochlupení systematicky ovlivňuje hodnocenou atraktivitu: plnovous byl spojen s konzistentním, i když relativně malým pozitivním efektem (~+0,30 bodu), zatímco samostatný knír vykazoval obecně negativní vliv, který byl silnější u tváří s vyšším bazálním hodnocením. Nezjistili jsme důkazy, že by se preferenční vzorce typů vousů významně lišily mezi muži a ženami v rámci měřeného konstruktu. Metodologicky studie ukazuje, že kombinace AI-generovaných stimulů a přesného maskování umožňuje vysokou míru experimentální kontroly, avšak tato kontrola má své limity z hlediska ekologické validity – další výzkum by měl ověřit, jak se výsledky přenášejí na reálné fotografie a do jiných kulturních kontextů.
         </p>
       </section>
 
       <section id="reference">
         <h1>Reference</h1>
         <ul class="references">
-          <li id="ref-adobe2026">Adobe Inc. (2026). <em>Adobe Photoshop</em> (Version 26.0) [Computer software]. Adobe Inc. <a href="https://www.adobe.com/products/photoshop.html" class="ref-link" target="_blank" rel="noopener">https://www.adobe.com/products/photoshop.html</a>[cite: 4]</li>
-          <li id="ref-brunswik1955">Brunswik, E. (1955). Representative design and probabilistic theory in a functional psychology. <em>Psychological Review</em>, 62(3), 193–217. <a href="https://doi.org/10.1037/h0047470" class="ref-link" target="_blank" rel="noopener">https://doi.org/10.1037/h0047470</a>[cite: 4]</li>
-          <li id="ref-dixson2013">Dixson, B. J., &amp; Brooks, R. C. (2013). The role of facial hair in women’s perceptions of men’s attractiveness, health, masculinity and parenting abilities. <em>Evolution and Human Behavior</em>, 34(3), 236–241. <a href="https://doi.org/10.1016/j.evolhumbehav.2013.02.003" class="ref-link" target="_blank" rel="noopener">https://doi.org/10.1016/j.evolhumbehav.2013.02.003</a>[cite: 4]</li>
-          <li id="ref-dixson2016">Dixson, B. J., Sulikowski, D., Gouda-Vossos, A., Rantala, M. J., &amp; Brooks, R. C. (2016). The masculinity paradox: Facial masculinity and beardedness interact to determine women’s ratings of men’s facial attractiveness. <em>Journal of Evolutionary Biology</em>, 29(11), 2311–2320. <a href="https://doi.org/10.1111/jeb.12958" class="ref-link" target="_blank" rel="noopener">https://doi.org/10.1111/jeb.12958</a>[cite: 4]</li>
-          <li id="ref-dixson2012">Dixson, B. J., &amp; Vasey, P. L. (2012). Beards augment perceptions of men’s age, social status, and aggressiveness, but not attractiveness. <em>Behavioral Ecology</em>, 23(3), 481–490. <a href="https://doi.org/10.1093/beheco/arr214" class="ref-link" target="_blank" rel="noopener">https://doi.org/10.1093/beheco/arr214</a>[cite: 4]</li>
-          <li id="ref-gallucci2019">Gallucci, M. (2019). <em>GAMLJ: General analyses for linear models</em> [jamovi module]. <a href="https://gamlj.github.io/" class="ref-link" target="_blank" rel="noopener">https://gamlj.github.io/</a>[cite: 4]</li>
-          <li id="ref-google2025">Google DeepMind. (2025). <em>Nano Banana Pro</em> [Generative AI model]. Google DeepMind.[cite: 4]</li>
-          <li id="ref-gray2020">Gray, P. B., Craig, L. K., Paiz-Say, J., Lavika, P., Kumar, S. A., &amp; Rangaswamy, M. (2020). Sexual selection, signaling and facial hair: US and India ratings of variable male facial hair. <em>Adaptive Human Behavior and Physiology</em>, 6(2), 170–184. <a href="https://doi.org/10.1007/s40750-020-00134-4" class="ref-link" target="_blank" rel="noopener">https://doi.org/10.1007/s40750-020-00134-4</a>[cite: 4]</li>
-          <li id="ref-greenwald1976">Greenwald, A. G. (1976). Within-subjects designs: To use or not to use? <em>Psychological Bulletin</em>, 83(2), 314–320. <a href="https://doi.org/10.1037/0033-2909.83.2.314" class="ref-link" target="_blank" rel="noopener">https://doi.org/10.1037/0033-2909.83.2.314</a>[cite: 4]</li>
-          <li id="ref-jach2020">Jach, Ł., &amp; Moroń, M. (2020). I can wear a beard, but you should shave… Preferences for men’s facial hair from the perspective of both sexes. <em>Evolutionary Psychology</em>, 18(4). <a href="https://doi.org/10.1177/1474704920961728" class="ref-link" target="_blank" rel="noopener">https://doi.org/10.1177/1474704920961728</a>[cite: 4]</li>
-          <li id="ref-janif2014">Janif, Z. M., Brooks, R. C., &amp; Dixson, B. J. (2014). Negative frequency-dependent preferences for facial hair. <em>Biology Letters</em>, 10(4), 20130958. <a href="https://doi.org/10.1098/rsbl.2013.0958" class="ref-link" target="_blank" rel="noopener">https://doi.org/10.1098/rsbl.2013.0958</a>[cite: 4]</li>
-          <li id="ref-karras2020">Karras, T., Laine, S., Aittala, M., Hellsten, J., Lehtinen, J., &amp; Aila, T. (2020). Analyzing and improving the image quality of StyleGAN. <em>Proceedings of the IEEE/CVF Conference on Computer Vision and Pattern Recognition</em>, 8107–8116. <a href="https://doi.org/10.1109/CVPR42600.2020.00813" class="ref-link" target="_blank" rel="noopener">https://doi.org/10.1109/CVPR42600.2020.00813</a>[cite: 4]</li>
-          <li id="ref-ma2015">Ma, D. S., Correll, J., &amp; Wittenbrink, B. (2015). The Chicago Face Database: A free stimulus set of faces and norming data. <em>Behavior Research Methods</em>, 47(4), 1122–1135. <a href="https://doi.org/10.3758/s13428-014-0532-5" class="ref-link" target="_blank" rel="noopener">https://doi.org/10.3758/s13428-014-0532-5</a>[cite: 4]</li>
-          <li id="ref-nightingale2022">Nightingale, S. J., &amp; Farid, H. (2022). AI-synthesized faces are indistinguishable from real faces and more trustworthy. <em>Proceedings of the National Academy of Sciences</em>, 119(8), e2120481119. <a href="https://doi.org/10.1073/pnas.2120481119" class="ref-link" target="_blank" rel="noopener">https://doi.org/10.1073/pnas.2120481119</a>[cite: 4]</li>
-          <li id="ref-niemi1981">Niemi, P., &amp; Näätänen, R. (1981). Foreperiod and simple reaction time. <em>Psychological Bulletin</em>, 89(1), 133–162. <a href="https://doi.org/10.1037/0033-2909.89.1.133" class="ref-link" target="_blank" rel="noopener">https://doi.org/10.1037/0033-2909.89.1.133</a>[cite: 4]</li>
-          <li id="ref-parducci1965">Parducci, A. (1965). Category judgment: A range-frequency model. <em>Psychological Review</em>, 72(6), 407–418. <a href="https://doi.org/10.1037/h0022602" class="ref-link" target="_blank" rel="noopener">https://doi.org/10.1037/h0022602</a>[cite: 4]</li>
-          <li id="ref-rombach2022">Rombach, R., Blattmann, A., Lorenz, D., Esser, P., &amp; Ommer, B. (2022). High-resolution image synthesis with latent diffusion models. <em>Proceedings of the IEEE/CVF Conference on Computer Vision and Pattern Recognition</em>, 10684–10695. <a href="https://doi.org/10.1109/CVPR52688.2022.01042" class="ref-link" target="_blank" rel="noopener">https://doi.org/10.1109/CVPR52688.2022.01042</a>[cite: 4]</li>
+          <li id="ref-adobe2026">Adobe Inc. (2026). <em>Adobe Photoshop</em> (Version 26.0) [Computer software]. Adobe Inc. <a href="https://www.adobe.com/products/photoshop.html" class="ref-link" target="_blank" rel="noopener">https://www.adobe.com/products/photoshop.html</a></li>
+          <li id="ref-brunswik1955">Brunswik, E. (1955). Representative design and probabilistic theory in a functional psychology. <em>Psychological Review</em>, 62(3), 193–217. <a href="https://doi.org/10.1037/h0047470" class="ref-link" target="_blank" rel="noopener">https://doi.org/10.1037/h0047470</a></li>
+          <li id="ref-dixson2013">Dixson, B. J., &amp; Brooks, R. C. (2013). The role of facial hair in women’s perceptions of men’s attractiveness, health, masculinity and parenting abilities. <em>Evolution and Human Behavior</em>, 34(3), 236–241. <a href="https://doi.org/10.1016/j.evolhumbehav.2013.02.003" class="ref-link" target="_blank" rel="noopener">https://doi.org/10.1016/j.evolhumbehav.2013.02.003</a></li>
+          <li id="ref-dixson2016">Dixson, B. J., Sulikowski, D., Gouda-Vossos, A., Rantala, M. J., &amp; Brooks, R. C. (2016). The masculinity paradox: Facial masculinity and beardedness interact to determine women’s ratings of men’s facial attractiveness. <em>Journal of Evolutionary Biology</em>, 29(11), 2311–2320. <a href="https://doi.org/10.1111/jeb.12958" class="ref-link" target="_blank" rel="noopener">https://doi.org/10.1111/jeb.12958</a></li>
+          <li id="ref-dixson2012">Dixson, B. J., &amp; Vasey, P. L. (2012). Beards augment perceptions of men’s age, social status, and aggressiveness, but not attractiveness. <em>Behavioral Ecology</em>, 23(3), 481–490. <a href="https://doi.org/10.1093/beheco/arr214" class="ref-link" target="_blank" rel="noopener">https://doi.org/10.1093/beheco/arr214</a></li>
+          <li id="ref-gallucci2019">Gallucci, M. (2019). <em>GAMLJ: General analyses for linear models</em> [jamovi module]. <a href="https://gamlj.github.io/" class="ref-link" target="_blank" rel="noopener">https://gamlj.github.io/</a></li>
+          <li id="ref-google2025">Google DeepMind. (2025). <em>Nano Banana Pro</em> [Generative AI model]. Google DeepMind.</li>
+          <li id="ref-gray2020">Gray, P. B., Craig, L. K., Paiz-Say, J., Lavika, P., Kumar, S. A., &amp; Rangaswamy, M. (2020). Sexual selection, signaling and facial hair: US and India ratings of variable male facial hair. <em>Adaptive Human Behavior and Physiology</em>, 6(2), 170–184. <a href="https://doi.org/10.1007/s40750-020-00134-4" class="ref-link" target="_blank" rel="noopener">https://doi.org/10.1007/s40750-020-00134-4</a></li>
+          <li id="ref-greenwald1976">Greenwald, A. G. (1976). Within-subjects designs: To use or not to use? <em>Psychological Bulletin</em>, 83(2), 314–320. <a href="https://doi.org/10.1037/0033-2909.83.2.314" class="ref-link" target="_blank" rel="noopener">https://doi.org/10.1037/0033-2909.83.2.314</a></li>
+          <li id="ref-jach2020">Jach, Ł., &amp; Moroń, M. (2020). I can wear a beard, but you should shave… Preferences for men’s facial hair from the perspective of both sexes. <em>Evolutionary Psychology</em>, 18(4). <a href="https://doi.org/10.1177/1474704920961728" class="ref-link" target="_blank" rel="noopener">https://doi.org/10.1177/1474704920961728</a></li>
+          <li id="ref-janif2014">Janif, Z. M., Brooks, R. C., &amp; Dixson, B. J. (2014). Negative frequency-dependent preferences for facial hair. <em>Biology Letters</em>, 10(4), 20130958. <a href="https://doi.org/10.1098/rsbl.2013.0958" class="ref-link" target="_blank" rel="noopener">https://doi.org/10.1098/rsbl.2013.0958</a></li>
+          <li id="ref-karras2020">Karras, T., Laine, S., Aittala, M., Hellsten, J., Lehtinen, J., &amp; Aila, T. (2020). Analyzing and improving the image quality of StyleGAN. <em>Proceedings of the IEEE/CVF Conference on Computer Vision and Pattern Recognition</em>, 8107–8116. <a href="https://doi.org/10.1109/CVPR42600.2020.00813" class="ref-link" target="_blank" rel="noopener">https://doi.org/10.1109/CVPR42600.2020.00813</a></li>
+          <li id="ref-ma2015">Ma, D. S., Correll, J., &amp; Wittenbrink, B. (2015). The Chicago Face Database: A free stimulus set of faces and norming data. <em>Behavior Research Methods</em>, 47(4), 1122–1135. <a href="https://doi.org/10.3758/s13428-014-0532-5" class="ref-link" target="_blank" rel="noopener">https://doi.org/10.3758/s13428-014-0532-5</a></li>
+          <li id="ref-nightingale2022">Nightingale, S. J., &amp; Farid, H. (2022). AI-synthesized faces are indistinguishable from real faces and more trustworthy. <em>Proceedings of the National Academy of Sciences</em>, 119(8), e2120481119. <a href="https://doi.org/10.1073/pnas.2120481119" class="ref-link" target="_blank" rel="noopener">https://doi.org/10.1073/pnas.2120481119</a></li>
+          <li id="ref-niemi1981">Niemi, P., &amp; Näätänen, R. (1981). Foreperiod and simple reaction time. <em>Psychological Bulletin</em>, 89(1), 133–162. <a href="https://doi.org/10.1037/0033-2909.89.1.133" class="ref-link" target="_blank" rel="noopener">https://doi.org/10.1037/0033-2909.89.1.133</a></li>
+          <li id="ref-parducci1965">Parducci, A. (1965). Category judgment: A range-frequency model. <em>Psychological Review</em>, 72(6), 407–418. <a href="https://doi.org/10.1037/h0022602" class="ref-link" target="_blank" rel="noopener">https://doi.org/10.1037/h0022602</a></li>
+          <li id="ref-rombach2022">Rombach, R., Blattmann, A., Lorenz, D., Esser, P., &amp; Ommer, B. (2022). High-resolution image synthesis with latent diffusion models. <em>Proceedings of the IEEE/CVF Conference on Computer Vision and Pattern Recognition</em>, 10684–10695. <a href="https://doi.org/10.1109/CVPR52688.2022.01042" class="ref-link" target="_blank" rel="noopener">https://doi.org/10.1109/CVPR52688.2022.01042</a></li>
           <li id="ref-shadish2002">Shadish, W. R., Cook, T. D., &amp; Campbell, D. T. (2002). <em>Experimental and quasi-experimental designs for generalized causal inference</em>. Houghton Mifflin.</li>
           <li id="ref-willis2006">Willis, J., &amp; Todorov, A. (2006). First impressions: Making up your mind after a 100-ms exposure to a face. <em>Psychological Science</em>, 17(7), 592–598. <a href="https://doi.org/10.1111/j.1467-9280.2006.01750.x" class="ref-link" target="_blank" rel="noopener">https://doi.org/10.1111/j.1467-9280.2006.01750.x</a></li>
         </ul>
@@ -755,7 +782,7 @@
   <!-- TOC Scroll Highlighting Script -->
   <script>
     document.addEventListener('DOMContentLoaded', () => {
-      const tocLinks = document.querySelectorAll('nav.toc-sidebar a');
+      const tocLinks = document.querySelectorAll('nav.toc-sidebar a.toc-item');
       const trackedElements = document.querySelectorAll('section[id]');
 
       const observerOptions = {
